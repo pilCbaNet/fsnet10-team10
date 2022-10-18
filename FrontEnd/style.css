@@ -1,13 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+div{
+    margin: 0;
+}
 
+
+article{
+    width: 90%;
+}
+
+p{
+    margin: 0;
+}
 .container-box{
-    padding: 10px;
+    padding: 10px 20px;
     background: linear-gradient(273.87deg, #9381FF 2.86%, rgba(147, 129, 255, 0.89) 99.07%);
+    border-radius: 20px;
 
 }
 
@@ -15,49 +29,68 @@
     color: #FFFFFF;
 }
 
-.title-table p{
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 18px;
-}
-
 .title-table{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
 }
 
-
-
-.table-header th{
-    padding: 10px;
-    font-family: 'DM Sans';
+.title-table p{
+    font-family: var(--font-sans);
     font-style: normal;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1.1rem;
     line-height: 18px;
-    border-bottom: 1px solid red;
-}
-
-.status-transaction, .date-transaction{
-    display: none;
+    
 }
 
 .transaction{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 10px;
+}
+
+.transaction p{
+    font-family: var(--font-sans);
+    letter-spacing: 0.2px;
+    font-size: 15px;
+}
+
+.amount-container, .total-transaction{
+    flex-grow: 0.5;
+}
+
+.status-transaction, .date-transaction{
+    display: none;
+}
+
+
+.name-transaction{
+    flex-grow: 0.5;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
     align-items: center;
 }
 
-.name-transaction, .amount-transaction, .total-transaction{
-    flex-grow: 0.3;
+.icon-crypto{
+    width: 12px;
 }
 
-.name-transaction{
-    width: 155px;
+.status-transaction, .amount-transaction, .total-transaction, .date-transaction{
+    text-align: end;
 }
 
+
+@media (min-width: 768px) {
+    .status-transaction, .date-transaction{
+        display: block;
+    }
+}
