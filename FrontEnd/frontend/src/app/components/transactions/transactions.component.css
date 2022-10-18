@@ -1,0 +1,85 @@
+p{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.ds-flex-column{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-box{
+  width: 90%;
+}
+.contain-box{
+  padding: 20px;
+  background: linear-gradient(273.87deg, #9381FF 2.86%, rgba(147, 129, 255, 0.89) 99.07%);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.transaction p{
+  color: #FFF;
+}
+
+.transaction{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+  border-bottom: rgb(219, 219, 219) 1px solid;
+}
+
+.transaction p{
+  font-family: var(--font-sans);
+  letter-spacing: 0.2px;
+  font-size: 15px;
+}
+
+.amount-container, .total-transaction{
+  flex-grow: 0.5;
+}
+
+.status-transaction{
+  display: none;
+}
+
+
+.name-transaction{
+  width: 50%;
+  flex-grow: 0.5;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 10px;
+  align-items: center;
+}
+
+p.date-transaction{
+  text-align: left;
+  padding-left: 24px;
+  color: rgba(255, 255, 255, 0.829);
+  width: 100%;
+}
+.icon-crypto{
+  width: 12px;
+}
+
+.status-transaction, .amount-transaction, .total-transaction{
+  text-align: end;
+}
+
+
+@media (min-width: 540px) {
+  .status-transaction{
+      display: block;
+  }
+}

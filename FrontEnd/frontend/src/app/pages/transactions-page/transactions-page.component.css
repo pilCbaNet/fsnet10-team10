@@ -1,0 +1,21 @@
+.ds-flex-column{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-page-transacions{
+  color: #352E5B;
+  padding: 20px 0;
+
+}
+.main-transactions{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
