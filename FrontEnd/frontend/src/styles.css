@@ -1,0 +1,11 @@
+body {
+    background: rgb(240, 239, 239);
+}
+
+.sidebar{
+
+        height: 100%;
+        min-height: 100vh;
+        min-width: 180px;
+    
+}
