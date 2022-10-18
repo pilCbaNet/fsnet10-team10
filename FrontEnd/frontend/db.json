@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+
+  "accounts": [
+    {
+      "id": 1,
+      "name": "Maslaton",
+      "pass": 1234
+    },
+    {
+      "id": 2,
+      "name": "BetoMendeleiev",
+      "pass": 1234
+    }
+  ]
+}
