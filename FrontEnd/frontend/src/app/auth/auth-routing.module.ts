@@ -11,7 +11,7 @@ const routes: Routes = [
       component: MainComponent,
       children: [
         { path: 'login', component:  LoginComponent},
-        { path: 'change/:id', component:  ChangePasswordComponent},
+        { path: 'change', component:  ChangePasswordComponent},
         { path: 'create', component:  CreateAccountComponent},
         { path: '**', redirectTo: 'login' },
       ]
