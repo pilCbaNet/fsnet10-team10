@@ -1,3 +1,7 @@
+:root {
+  --primer-color: #425F57;
+}
+
 body {
     background: rgb(240, 239, 239);
 }
@@ -7,5 +11,33 @@ body {
         height: 100%;
         min-height: 100vh;
         min-width: 180px;
-    
+}
+
+.flexbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-logo{
+  width: 200px;
+}
+
+h1 {
+  color: var(--primer-color);
+}
+
+h3 {
+  color: var(--primer-color);
+}
+
+.boton {
+  background: var(--primer-color);
+  color: white;
+}
+
+.boton:hover {
+  background:#7ca298;
+
 }
