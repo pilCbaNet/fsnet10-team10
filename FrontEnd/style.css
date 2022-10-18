@@ -6,46 +6,41 @@
     box-sizing: border-box;
 }
 
-div{
-    margin: 0;
-}
-
-
 article{
     width: 90%;
 }
 
-p{
-    margin: 0;
+.ds-flex-column{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-page-transacions{
+    color: #352E5B;
+    padding: 20px 0;
+
+}
+.main-transactions{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .container-box{
-    padding: 10px 20px;
+    padding: 20px;
     background: linear-gradient(273.87deg, #9381FF 2.86%, rgba(147, 129, 255, 0.89) 99.07%);
     border-radius: 20px;
-
+    width: 100%;
+    max-width: 600px;
 }
 
-.transaction p, .title-table p{
-    color: #FFFFFF;
-}
-
-.title-table{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #fff;
-}
-
-.title-table p{
-    font-family: var(--font-sans);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 18px;
-    
+.transaction p{
+    color: #FFF;
 }
 
 .transaction{
@@ -53,7 +48,9 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    padding-bottom: 10px;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    border-bottom: rgb(219, 219, 219) 1px solid;
 }
 
 .transaction p{
@@ -66,31 +63,38 @@ p{
     flex-grow: 0.5;
 }
 
-.status-transaction, .date-transaction{
+.status-transaction{
     display: none;
 }
 
 
 .name-transaction{
+    width: 50%;
     flex-grow: 0.5;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 10px;
+    column-gap: 10px;
     align-items: center;
 }
 
+p.date-transaction{
+    text-align: left;
+    padding-left: 24px;
+    color: rgba(255, 255, 255, 0.829);
+    width: 100%;
+}
 .icon-crypto{
     width: 12px;
 }
 
-.status-transaction, .amount-transaction, .total-transaction, .date-transaction{
+.status-transaction, .amount-transaction, .total-transaction{
     text-align: end;
 }
 
 
-@media (min-width: 768px) {
-    .status-transaction, .date-transaction{
+@media (min-width: 540px) {
+    .status-transaction{
         display: block;
     }
 }
