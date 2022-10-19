@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +7,8 @@ import { UserService } from '../services/user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private userService: UserService,
-               private router     : Router 
+  constructor(
+               private router     : Router
   ) { }
 
   ngOnInit(): void {
@@ -17,10 +16,7 @@ export class LoginComponent implements OnInit {
 
   login() {
 
-    this.userService.login()
-      .subscribe( resp => {
-        console.log(resp)
-      })
-    // this.router.navigate(['./home'])
+
+    this.router.navigate(['./home'])
   }
 }
