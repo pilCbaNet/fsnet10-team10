@@ -9,6 +9,16 @@
       "email": "manu@manu.com",
       "pass": "123456",
       "id": 2
+    },
+    {
+      "email": "man@mau.com",
+      "pass": "manuel",
+      "id": 3
+    },
+    {
+      "email": "manu@manu.com",
+      "pass": "manuel",
+      "id": 4
     }
   ],
   "comments": [

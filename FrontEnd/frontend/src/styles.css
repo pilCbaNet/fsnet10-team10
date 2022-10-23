@@ -6,11 +6,25 @@ body {
     background: rgb(240, 239, 239);
 }
 
-.sidebar{
+/* .sidebar{
 
         height: 100%;
         min-height: 100vh;
         min-width: 180px;
+} */
+
+.fondoDolar{
+  background-color: var(--primer-color);
+  color: white;
+}
+
+.navegacionLateral{
+  display: flex;
+  flex-direction: column;
+}
+
+.itemsNav{
+  
 }
 
 .flexbox{
@@ -40,4 +54,8 @@ h3 {
 .boton:hover {
   background:#7ca298;
 
+}
+
+.cursorPointer:hover{
+  cursor: pointer;
 }
