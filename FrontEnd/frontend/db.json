@@ -4,6 +4,11 @@
       "id": 1,
       "title": "json-server",
       "author": "typicode"
+    },
+    {
+      "email": "manu@manu.com",
+      "pass": "123456",
+      "id": 2
     }
   ],
   "comments": [
@@ -16,17 +21,16 @@
   "profile": {
     "name": "typicode"
   },
-
   "accounts": [
     {
       "id": 1,
-      "name": "Maslaton",
-      "pass": 1234
+      "email": "hola@hola.com",
+      "pass": 123456
     },
     {
       "id": 2,
-      "name": "BetoMendeleiev",
-      "pass": 1234
+      "email": "chau@chau.com",
+      "pass": 654321
     }
   ]
 }
