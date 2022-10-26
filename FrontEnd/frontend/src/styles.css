@@ -38,14 +38,6 @@ body {
   width: 200px;
 }
 
-h1 {
-  color: var(--primer-color);
-}
-
-h3 {
-  color: var(--primer-color);
-}
-
 .boton {
   background: var(--primer-color);
   color: white;
@@ -53,9 +45,13 @@ h3 {
 
 .boton:hover {
   background:#7ca298;
-
+  color: white;
 }
 
 .cursorPointer:hover{
   cursor: pointer;
+}
+
+.colorVerde{
+  color: var(--primer-color);
 }
