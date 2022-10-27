@@ -6,19 +6,14 @@
       "author": "typicode"
     },
     {
-      "email": "manu@hola.com",
-      "pass": "askdaa",
+      "email": "man@manu.com",
+      "pass": "manuel",
       "id": 2
     },
     {
-      "email": "yami@yami.com",
-      "pass": "yamila",
-      "id": 3
-    },
-    {
-      "email": "marcos@marcos.com",
+      "email": "manu@manu.com",
       "pass": "manuel",
-      "id": 4
+      "id": 3
     }
   ],
   "comments": [
