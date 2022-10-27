@@ -1,42 +1,35 @@
 <article class="ds-flex-column">
   <div class="ds-flex-column container-box">
     <div class="contain-box">
+      <div *ngFor="let transaction of Transactions">
         <div class="transaction">
-            <div class="name-transaction">
-                <img class="icon-crypto" src="../../../assets/etherum.svg" alt="icon etherum">
-                <p>Ethereum Purchased</p>
-                <p class="date-transaction">February 21, 2021</p>
-            </div>
-            <p class="status-transaction">Pending</p>
+          <div class="name-transaction" >
+              <img
+                class="icon-crypto"
+                [src]="'../../../assets/' + (transaction.description | lowercase) + '.svg'"
+                alt="icon etherum"
+              />
+            <p class="description-transaction">{{transaction.description}}</p>
+            <p class="date-transaction">{{transaction.date}}</p>
+          </div>
+          <p class="status-transaction">{{transaction.status}}</p>
+
+
+          <ng-container *ngIf="transaction.type === 'shipment' || transaction.type === 'purchased';else Plus">
             <div class="amount-container">
-                <p class="amount-transaction">0.0154 ETH</p>
-                <p class="total-transaction">USD $ 10</p>
+              <p class="amount-transaction">- {{transaction.cripto}} {{transaction.typeCrypto}}</p>
+              <p class="total-transaction">{{transaction.typeMoney}} {{transaction.amount}}</p>
             </div>
-        </div>
-        <div class="transaction">
-            <div class="name-transaction">
-                <img class="icon-crypto" src="../../../assets/bitcoin.svg" alt="icon etherum">
-                <p>Bitcoin Purchased</p>
-                <p class="date-transaction">February 14, 2021</p>
-            </div>
-            <p class="status-transaction">Done</p>
+          </ng-container >
+
+          <ng-template #Plus>
             <div class="amount-container">
-                <p class="amount-transaction">0.3 BTC</p>
-                <p class="total-transaction">USD $140</p>
+              <p class="amount-transaction">+ {{transaction.cripto}} {{transaction.typeCrypto}}</p>
+              <p class="total-transaction">{{transaction.typeMoney}} {{transaction.amount}}</p>
             </div>
+          </ng-template>
         </div>
-        <div class="transaction">
-            <div class="name-transaction">
-                <img class="icon-crypto" src="../../../assets/bitcoin.svg" alt="icon etherum">
-                <p>Bitcoin Purchased</p>
-                <p class="date-transaction">January 14, 2021</p>
-            </div>
-            <p class="status-transaction">Done</p>
-            <div class="amount-container">
-                <p class="amount-transaction">0.025 BTC</p>
-                <p class="total-transaction">USD $56</p>
-            </div>
-        </div>
+      </div>
     </div>
   </div>
 </article>

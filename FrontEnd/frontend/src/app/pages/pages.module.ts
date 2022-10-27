@@ -8,6 +8,9 @@ import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { PageRoutingModule } from './pages-routing.module';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { TransactionsComponent } from '../components/transactions/transactions.component';
+import { TransactionsPageComponent } from './transactions-page/transactions-page.component';
+import { SpinnerComponent } from '../components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
     AboutComponent,
     ContactComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    TransactionsComponent,
+    TransactionsPageComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,

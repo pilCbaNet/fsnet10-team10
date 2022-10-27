@@ -18,14 +18,19 @@ p{
 }
 .contain-box{
   padding: 20px;
-  background: linear-gradient(273.87deg, #9381FF 2.86%, rgba(147, 129, 255, 0.89) 99.07%);
+  background: #FFF;
   border-radius: 20px;
   width: 100%;
   max-width: 600px;
+  border: 1px solid var(--primer-color);
+  box-shadow: 1px 1px 12px 4px rgba(173, 173, 173, 0.377);
+  -webkit-box-shadow: 1px 1px 12px 4px rgba(173, 173, 173, 0.377);
+  -moz-box-shadow: 1px 1px 12px 4px rgba(173, 173, 173, 0.377);
 }
 
 .transaction p{
-  color: #FFF;
+  color: rgb(158, 158, 158);
+  font-family: var(--font-sans);
 }
 
 .transaction{
@@ -78,8 +83,27 @@ p.date-transaction{
 }
 
 
+.description-transaction{
+  color: rgb(109, 109, 109) !important;
+  font-weight: bold;
+}
+
+
 @media (min-width: 540px) {
   .status-transaction{
       display: block;
+      flex: 0.4;
+      max-width: 55px;
+  }
+  .amount-container, .total-transaction{
+    flex-grow: 0.5;
+  }
+  .name-transaction{
+    flex-grow: 0.4;
+    width: 40%;
+    max-width: 230px;
+  }
+  .amount-container{
+    width: 40%;
   }
 }
