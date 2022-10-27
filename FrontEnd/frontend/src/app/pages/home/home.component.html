@@ -1,16 +1,50 @@
-
-<div class="container d-flex justify-content-center">
-  <div class="card mt-5 shadow" style="width: 18rem;">
+<div
+  class="container d-flex justify-content-center align-items-center flex-column"
+>
+  <div class="card mt-2 shadow" style="width: 18rem">
     <div class="card-body">
-      <p class="card-title text-center fs-3 colorVerde fw-bold">Dinero en cuenta</p>
+      <p class="card-title text-center fs-3 colorVerde fw-bold">
+        Dinero en cuenta
+      </p>
 
-      <p class="card-text text-center fw-bold fs-5">{{'10253' | currency}}</p>
+      <p class="card-text text-center fw-bold fs-5">{{ "10253" | currency }}</p>
 
       <div>
         <button class="btn boton me-2">Enviar dinero</button>
         <button class="btn boton">Recibir dinero</button>
       </div>
-
     </div>
   </div>
+  <h2 class="text-center colorVerde mt-5">Movimientos historicos</h2>
+  <table class="table mt-2 bg-white shadow">
+    <thead>
+      <tr class="table-dark">
+        <th scope="col"></th>
+        <th scope="col">Transacción</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Monto</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr class="table-danger">
+        <th scope="row">1</th>
+        <td>Envío de dinero a 24149910359519</td>
+        <td>10/10/1990</td>
+        <td>{{ "3245" | currency }}</td>
+      </tr>
+      <tr class="table-success">
+        <th scope="row">2</th>
+        <td>Ingreso de dinero de 983915908159015</td>
+        <td>10/10/1990</td>
+        <td>{{ "983" | currency }}</td>
+      </tr>
+      <tr class="table-danger">
+        <th scope="row">2</th>
+        <td>Envío de dinero a 24149910359519</td>
+        <td>10/10/1990</td>
+        <td>{{ "1293" | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
