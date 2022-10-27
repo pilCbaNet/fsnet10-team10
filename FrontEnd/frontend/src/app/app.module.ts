@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+
 import { AppComponent } from './app.component';
-import { TransactionsComponent } from './components/transactions/transactions.component';
-import { TransactionsPageComponent } from './pages/transactions-page/transactions-page.component';
+import { SharedModule } from './shared/shared.module';
+import { PagesModule } from './pages/pages.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionsComponent,
-    TransactionsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
+    HttpClientModule,
+    SharedModule,
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

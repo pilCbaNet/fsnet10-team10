@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "email": "man@manu.com",
+      "pass": "manuel",
+      "id": 2
+    },
+    {
+      "email": "manu@manu.com",
+      "pass": "manuel",
+      "id": 3
+    },
+    {
+      "email": "eve.holt@reqres.in",
+      "pass": "cityslicka",
+      "id": 4
+    },
+    {
+      "email": "eve.holt@reqres.in",
+      "pass": "cityslicka",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "accounts": [
+    {
+      "id": 1,
+      "email": "hola@hola.com",
+      "pass": 123456
+    },
+    {
+      "id": 2,
+      "email": "chau@chau.com",
+      "pass": 654321
+    }
+  ]
+}

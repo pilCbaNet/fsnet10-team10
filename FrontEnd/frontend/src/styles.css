@@ -1,0 +1,57 @@
+:root {
+  --primer-color: #425F57;
+}
+
+body {
+    background: rgb(240, 239, 239);
+}
+
+
+.fondoDolar{
+  background-color: var(--primer-color);
+  color: white;
+}
+
+.navegacionLateral{
+  display: flex;
+  flex-direction: column;
+}
+
+.itemsNav{
+  text-decoration: none;
+  color: white;
+}
+
+.itemsNav:hover{
+  cursor: pointer;
+  color: bisque;
+}
+
+.flexbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-logo{
+  width: 200px;
+}
+
+.boton {
+  background: var(--primer-color);
+  color: white;
+}
+
+.boton:hover {
+  background:#7ca298;
+  color: white;
+}
+
+.cursorPointer:hover{
+  cursor: pointer;
+}
+
+.colorVerde{
+  color: var(--primer-color);
+}

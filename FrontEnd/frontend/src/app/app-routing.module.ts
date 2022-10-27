@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TransactionsPageComponent } from './pages/transactions-page/transactions-page.component';
-;
+
 
 const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'home'
+    path: 'iniciar-sesion',
+    loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )
   },
   {
-    path: 'home',
-    component : TransactionsPageComponent
+    path: 'main',
+    loadChildren: () => import('./pages/pages.module').then( m => m.PagesModule )
   },
+  {
+    path: '**',
+    redirectTo: 'main'
+  }
 ];
 
 @NgModule({
