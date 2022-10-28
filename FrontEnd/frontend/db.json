@@ -67,47 +67,47 @@
   "transactions": [
     {
       "id": 1,
-      "description": "Ethereum",
-      "type": "purchased",
+      "description": "Transference",
+      "type": "shipment",
       "status" : "Pending",
-      "cripto": "0.0154",
-      "typeCrypto": "ETH",
+      "cripto": "",
+      "typeCrypto": "",
       "amount": "10",
       "typeMoney": "USD",
-      "date": "21/02/21"
+      "date": "21/02/21 15:26"
     },
     {
       "id": 2,
-      "description": "Bitcoin",
-      "type": "purchased",
+      "description": "Transference",
+      "type": "receive",
       "status" : "Done",
-      "cripto": "0.3",
-      "typeCrypto": "BTC",
+      "cripto": "",
+      "typeCrypto": "",
       "amount": "140",
       "typeMoney": "USD",
-      "date": "14/02/21"
+      "date": "14/02/21 08:00"
     },
     {
       "id": 3,
-      "description": "Bitcoin",
-      "type": "purchased",
+      "description": "Transference",
+      "type": "receive",
       "status" : "Done",
-      "cripto": "0.025",
-      "typeCrypto": "BTC",
+      "cripto": "",
+      "typeCrypto": "",
       "amount": "56",
       "typeMoney": "USD",
-      "date": "14/06/21"
+      "date": "14/06/21 09:56"
     },
     {
       "id": 4,
       "description": "Transference",
       "type": "shipment",
       "status" : "Done",
-      "cripto": "0.60",
-      "typeCrypto": "ETH",
+      "cripto": "",
+      "typeCrypto": "",
       "amount": "89",
       "typeMoney": "USD",
-      "date": "26/06/21"
+      "date": "26/06/21 15:45"
     },
     {
       "id": 5,
@@ -122,14 +122,14 @@
     },
     {
       "id": 6,
-      "description": "Ethereum",
-      "type": "sale",
+      "description": "Transference",
+      "type": "shipment",
       "status" : "Done",
-      "cripto": "0.5",
-      "typeCrypto": "ETH",
+      "cripto": "",
+      "typeCrypto": "",
       "amount": "150",
       "typeMoney": "USD",
-      "date": "05/01/21"
+      "date": "05/01/21 12:12"
     }
   ],
   "about": [

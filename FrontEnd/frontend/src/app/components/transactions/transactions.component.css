@@ -88,6 +88,18 @@ p.date-transaction{
   font-weight: bold;
 }
 
+.less{
+  color: red !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.plus{
+  color: rgb(2, 141, 44) !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 
 @media (min-width: 540px) {
   .status-transaction{
