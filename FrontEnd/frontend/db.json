@@ -48,6 +48,7 @@
       "postId": 1
     }
   ],
+
   "profile": {
     "name": "typicode"
   },
@@ -129,6 +130,85 @@
       "amount": "150",
       "typeMoney": "USD",
       "date": "05/01/21"
+    }
+  ],
+  "about": [
+    {
+      "id": 1,
+      "name": "Yamila Eliana Esteche",
+      "descripcion": "FullStack Developer",
+      "imagen": "img",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 2,
+      "name": "Jairo Kevin López",
+      "descripcion": "Desarrolladora web",
+      "imagen": "../../../assets/img/team/imagen2.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 3,
+      "name": "Jorge Agustín Pérez",
+      "descripcion": "FullStack Developer",
+      "imagen": "../../../assets/img/team/imagen3.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 4,
+      "name": "Manuel Leiva",
+      "descripcion": "Backend Developer C# .NET",
+      "imagen": "../../../assets/img/team/imagen4.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 5,
+      "name": "Nazareno Gabriel Pino",
+      "descripcion": "Desarrollador web .Net",
+      "imagen": "../../../assets/img/team/imagen5.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 6,
+      "name": "Martín Mario Gamboa Cataldi",
+      "descripcion": "UI/UX Designer - Tester QA - Front end developer",
+      "imagen": "../../../assets/img/team/imagen6.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+
+    {
+      "id": 7,
+      "name": "Franco Ezequiel Radicci",
+      "descripcion": "PHP Developer",
+      "imagen": "../../../assets/img/team/imagen7.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 8,
+      "name": "Marcos Exequiel Britos",
+      "descripcion": "Desarrollador Web",
+      "imagen": "../../../assets/img/team/imagen8.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 9,
+      "name": "Nicolás Gabriel Capell",
+      "descripcion": "Desarrollador Web",
+      "imagen": "../../../assets/img/team/imagen8.jpeg",    
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+    },
+    {
+      "id": 10,
+      "name": "Florencia Rocío Conci",
+      "descripcion": "Desarrollador Web",
+      "imagen": "../../../assets/img/team/imagen8.jpeg"
+    },
+    {
+      "id": 11,
+      "name": "Tomás Nahuel Fernández",
+      "descripcion": "Desarrollador Web",
+      "imagen": "../../../assets/img/team/imagen8.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
     }
   ]
 }
