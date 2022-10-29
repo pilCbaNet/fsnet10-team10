@@ -1,13 +1,21 @@
 <div class="d-flex justify-content-center flex-column align-items-center">
-  <div class="d-flex">
-    <app-sidebar></app-sidebar>
+ 
+ 
+  <div class="d-flex header">
+    <app-sidebar class="sideBar"></app-sidebar>
+    <a href="/"><img src="../../../assets/images/franklin.png" class="franklinHeader"></a>
 
-    <button type="button" class="btn btn-danger" (click)="logout()">
+    <button type="button" class="btn btn-danger logout" (click)="logout()">
       LOGOUT
     </button>
   </div>
 
-  <h1 class="colorVerde mt-3">Franklin</h1>
-  <h2 class="colorVerde mt-3">Billetera Virtual</h2>
+<div class="containerTitulo">
+  <a href="/"><img src="../../../assets/images/franklin.png" class="franklinHome"></a>
+  <h1 class="colorVerdeF mt-3">Franklin</h1>
+  <h2 class="colorVerdeB mt-3">Billetera Virtual</h2>
 </div>
+  
+</div>
+
 <router-outlet></router-outlet>
