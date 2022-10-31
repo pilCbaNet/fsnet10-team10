@@ -51,7 +51,102 @@ body {
 .cursorPointer:hover{
   cursor: pointer;
 }
-
-.colorVerde{
+.colorVerdeF {
+  border-left: 1px solid #023527;
+  margin-top: 5%;
   color: var(--primer-color);
+  text-align: center;
+  border-right: 1px solid #023527;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+.colorVerdeB {
+  
+  padding-left: 10px;
+  margin-top: 5%;
+  color: var(--primer-color);
+  text-align: center;
+}
+
+
+
+
+.text-uppercase {
+  text-decoration: none;
+  color:   #023527;
+  border: 1px solid #023527;
+  border-radius: 2px;
+  padding: 5px 5px 5px 5px;
+}
+
+.text-uppercase:hover {
+  color:#425F57;
+
+}
+
+.forgotPassword {
+  text-decoration: none;
+  color:  #023527;
+  border: 1px solid #023527;
+  border: 1px solid #023527;
+  border-radius: 2px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+}
+
+.forgotPassword:hover {
+  color: #425F57;
+}
+
+.divIngresar {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnIngresar {
+  background-color: #fff;
+  margin-top: 5px;
+}
+
+.header {
+  background-color: #425F57;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.franklinHeader {
+  height: 50px;
+  width: 50px;
+}
+
+.franklinHome{
+  height: 80px;
+  width: 80px;
+ 
+}
+.logout {
+  background-color: transparent;
+  border: 0px;
+  margin-right: 5%;
+
+}
+
+.logout:hover{
+  background-color: #7ca298;
+}
+
+.sideBar{
+  margin-left: 5%;
+}
+
+.containerTitulo {
+  display: flex;
+  align-items: center;
+  padding: 15px 15px 15px 15px;
+  margin-top: 2%;
+  border: 1px solid #425F57;
+  border-radius: 6px;
+}
+
