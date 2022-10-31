@@ -8,6 +8,7 @@ import { Recepcion } from '../models/recibirDinero.model';
   templateUrl: './recibir.component.html',
   styleUrls: ['./recibir.component.css']
 })
+
 export class RecibirComponent implements OnInit {
 
   recibirDinero: FormGroup = this.fb.group({
