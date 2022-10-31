@@ -41,16 +41,20 @@
         >crear una</a
       >
     </p>
-    <a routerLink="/iniciar-sesion/change"
+    <div class="divIngresar">
+    <a routerLink="/iniciar-sesion/change" class="forgotPassword"
       >¿Olvidaste tu password?</a
     >
-  </div>
-
-  <button
+    <button
     type="submit"
-    class="btn boton text-uppercase"
+    class="btn boton text-uppercase btnIngresar"
     [disabled]="miLogin.invalid"
   >
     Ingresar
   </button>
+
+</div>
+  </div>
+
+
 </form>
