@@ -9,6 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { TransactionsComponent } from '../components/transactions/transactions.component';
+import { TransactionsPageComponent } from './transactions-page/transactions-page.component';
+import { SpinnerComponent } from '../components/spinner/spinner.component';
 import { EnviarComponent } from './enviar/enviar.component';
 import { RecibirComponent } from './recibir/recibir.component';
 
@@ -19,6 +22,9 @@ import { RecibirComponent } from './recibir/recibir.component';
     ContactComponent,
     MainComponent,
     SidebarComponent,
+    TransactionsComponent,
+    TransactionsPageComponent,
+    SpinnerComponent,
     EnviarComponent,
     RecibirComponent
   ],

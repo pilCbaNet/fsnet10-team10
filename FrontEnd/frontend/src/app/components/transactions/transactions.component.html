@@ -1,0 +1,35 @@
+<article class="ds-flex-column">
+  <div class="ds-flex-column container-box">
+    <div class="contain-box">
+      <div *ngFor="let transaction of Transactions">
+        <div class="transaction">
+          <div class="name-transaction" >
+              <img
+                class="icon-crypto"
+                [src]="'../../../assets/' + (transaction.description | lowercase) + '.svg'"
+                alt="icon etherum"
+              />
+            <p class="description-transaction">{{transaction.description}}</p>
+            <p class="date-transaction">{{transaction.date}}</p>
+          </div>
+          <p class="status-transaction">{{transaction.status}}</p>
+
+
+          <ng-container *ngIf="transaction.type === 'shipment' || transaction.type === 'purchased';else Plus">
+            <div class="amount-container">
+              <!-- <p class="amount-transaction">- {{transaction.cripto}} {{transaction.typeCrypto}}</p> -->
+              <p class="total-transaction less"> - {{transaction.typeMoney}}{{transaction.amount}}</p>
+            </div>
+          </ng-container >
+
+          <ng-template #Plus>
+            <div class="amount-container">
+              <!-- <p class="amount-transaction">+ {{transaction.cripto}} {{transaction.typeCrypto}}</p> -->
+              <p class="total-transaction plus" > + {{transaction.typeMoney}}{{transaction.amount}}</p>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
