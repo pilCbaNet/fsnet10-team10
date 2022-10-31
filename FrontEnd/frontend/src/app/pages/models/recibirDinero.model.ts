@@ -1,4 +1,4 @@
-export class Login{
+export class Recepcion{
     cbuRecibir: number;
     montoRecibir: number;
 

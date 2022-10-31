@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Recepcion } from '../models/recibirDinero.model';
 
 @Component({
   selector: 'app-recibir',
@@ -31,7 +32,7 @@ export class RecibirComponent implements OnInit {
     if(this.recibirDinero.valid) {
       let cbuRecibir: number = this.recibirDinero.get('cbuRecibir')?.value;
       let montoRecibir : number = this.recibirDinero.get('montoRecibir')?.value;
-      let dineroARecibir: Login = new Login(cbuRecibir, montoRecibir);
+      let dineroARecibir: Recepcion = new Recepcion(cbuRecibir, montoRecibir);
 
     }
   }
