@@ -21,7 +21,7 @@ p{
   background: #FFF;
   border-radius: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   border: 1px solid var(--primer-color);
   box-shadow: 1px 1px 12px 4px rgba(173, 173, 173, 0.377);
   -webkit-box-shadow: 1px 1px 12px 4px rgba(173, 173, 173, 0.377);
@@ -113,7 +113,6 @@ p.date-transaction{
   .name-transaction{
     flex-grow: 0.4;
     width: 40%;
-    max-width: 230px;
   }
   .amount-container{
     width: 40%;
