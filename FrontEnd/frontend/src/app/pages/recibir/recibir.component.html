@@ -8,19 +8,42 @@
       <p class="card-title text-center fs-3 colorVerde fw-bold">
         Realizar un cobro
       </p>
-      <div>
-        <label for="send" class="text-gray-600">Recibir dinero de</label>
-        <input type="number" id="send" class="w-100 mb-4 mt-1" />
-      </div>
-      <div>
-        <label for="send" class="text-gray-600">Dinero a recibir</label>
-        <input type="number" id="send" class="w-100 mb-4 mt-1" />
-      </div>
-      <div>
-        <button routerLink="/main/enviar" class="btn boton me-2">
-          Enviar dinero
-        </button>
-      </div>
+      <form
+        autocomplete="off"
+        [formGroup]="recibirDinero"
+        (ngSubmit)="recibir()"
+      >
+        <div>
+          <label for="cbuRecibir" class="text-gray-600"
+            >Recibir dinero de</label
+          >
+          <input
+            type="number"
+            id="cbuRecibir"
+            class="w-100 mb-4 mt-1"
+            formControlName="cbuRecibir"
+          />
+        </div>
+        <div>
+          <label for="montoRecibir" class="text-gray-600"
+            >Dinero a recibir</label
+          >
+          <input
+            type="number"
+            id="montoRecibir"
+            class="w-100 mb-4 mt-1"
+            formControlName="montoRecibir"
+          />
+        </div>
+          <button
+            routerLink="/main/home"
+            class="btn boton me-2"
+            type="submit"
+          >
+            Recibir dinero
+          </button>
+
+      </form>
     </div>
   </div>
 </div>

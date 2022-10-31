@@ -15,25 +15,26 @@ export class RecibirComponent implements OnInit {
     montoRecibir: ['', [Validators.required]],
   });
   
-  get email() {
+  get cbuRecibir() {
     return this.recibirDinero.get('cbuRecibir');
   }
 
-  get pass() {
+  get montoRecibir() {
     return this.recibirDinero.get('montoRecibir');
   }
+
   constructor(private fb: FormBuilder,
-              private router: Router,) { }
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  enviar() {
+  recibir() {
     if(this.recibirDinero.valid) {
       let cbuRecibir: number = this.recibirDinero.get('cbuRecibir')?.value;
       let montoRecibir : number = this.recibirDinero.get('montoRecibir')?.value;
-      let dineroARecibir: Recepcion = new Recepcion(cbuRecibir, montoRecibir);
-
+      // let dineroARecibir: Recepcion = new Recepcion(cbuRecibir, montoRecibir);
+      console.log(cbuRecibir, montoRecibir)
     }
   }
 

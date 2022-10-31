@@ -8,19 +8,23 @@
       <p class="card-title text-center fs-3 colorVerde fw-bold">
         Enviar dinero
       </p>
-      <div>
-        <label for="send" class="text-gray-600">Colocar CBU</label>
-        <input type="number" id="send" class="w-100 mb-4 mt-1" />
-      </div>
-      <div>
-        <label for="send" class="text-gray-600">Dinero a enviar</label>
-        <input type="number" id="send" class="w-100 mb-4 mt-1" />
-      </div>
-      <div>
-        <button routerLink="/main/enviar" class="btn boton me-2">
-          Enviar dinero
-        </button>
-      </div>
+      <form autocomplete="off"
+      [formGroup]="enviarDinero"
+      (ngSubmit)="enviar()">
+        <div>
+          <label for="cbuEnviar" class="text-gray-600">Colocar CBU</label>
+          <input type="number" id="cbuEnviar" class="w-100 mb-4 mt-1" formControlName="cbuEnviar"/>
+        </div>
+        <div>
+          <label for="montoEnviar" class="text-gray-600">Dinero a enviar</label>
+          <input type="number" id="montoEnviar" class="w-100 mb-4 mt-1" formControlName="montoEnviar"/>
+        </div>
+        <div>
+          <button routerLink="/main/home" class="btn boton me-2" type="submit">
+            Enviar dinero
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>

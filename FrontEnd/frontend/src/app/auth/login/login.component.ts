@@ -36,8 +36,8 @@ export class LoginComponent {
       let login: Login = new Login(email, pass);
 
       this.usersService.iniciarSesion(login).subscribe((resp) => {
-        this.router.navigate(['./home']);
-        console.log(resp);
+        this.router.navigate(['./main/home']);
+        
       });
     }
     

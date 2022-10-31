@@ -4,14 +4,17 @@
     <label for="email" class="form-label">Email</label>
     <input
       type="email"
-      class="form-control" 
+      class="form-control"
       id="email"
       aria-describedby="emailHelp"
       formControlName="email"
     />
   </div>
   <!-- Validacion email -->
-  <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger">
+  <div
+    *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    class="alert alert-danger"
+  >
     <div *ngIf="email?.errors?.['required']">Email es requerido.</div>
     <div *ngIf="email?.errors?.['email']">Ingrese email válido.</div>
   </div>
@@ -26,7 +29,10 @@
     />
   </div>
   <!-- Validacion password -->
-  <div *ngIf="pass?.invalid && (pass?.dirty || pass?.touched)" class="alert alert-danger">
+  <div
+    *ngIf="pass?.invalid && (pass?.dirty || pass?.touched)"
+    class="alert alert-danger"
+  >
     <div *ngIf="pass?.errors?.['required']">El password es requerido.</div>
     <div *ngIf="pass?.errors?.['minlength']">Su contraseña es corta.</div>
   </div>
@@ -42,19 +48,16 @@
       >
     </p>
     <div class="divIngresar">
-    <a routerLink="/iniciar-sesion/change" class="forgotPassword"
-      >¿Olvidaste tu password?</a
-    >
-    <button
-    type="submit"
-    class="btn boton text-uppercase btnIngresar"
-    [disabled]="miLogin.invalid"
-  >
-    Ingresar
-  </button>
-
-</div>
+      <a routerLink="/iniciar-sesion/change" class="forgotPassword"
+        >¿Olvidaste tu password?</a
+      >
+      <button
+        type="submit"
+        class="btn boton text-uppercase btnIngresar"
+        [disabled]="miLogin.invalid"
+      >
+        Ingresar
+      </button>
+    </div>
   </div>
-
-
 </form>
