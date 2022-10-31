@@ -11,6 +11,8 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
 import { TransactionsComponent } from '../components/transactions/transactions.component';
 import { TransactionsPageComponent } from './transactions-page/transactions-page.component';
 import { SpinnerComponent } from '../components/spinner/spinner.component';
+import { EnviarComponent } from './enviar/enviar.component';
+import { RecibirComponent } from './recibir/recibir.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { SpinnerComponent } from '../components/spinner/spinner.component';
     SidebarComponent,
     TransactionsComponent,
     TransactionsPageComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    EnviarComponent,
+    RecibirComponent
   ],
   imports: [
     CommonModule,

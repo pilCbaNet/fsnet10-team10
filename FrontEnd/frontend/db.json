@@ -6,39 +6,9 @@
       "author": "typicode"
     },
     {
-      "email": "man@manu.com",
-      "pass": "manuel",
+      "email": "manu@g.com",
+      "pass": "masdasñda",
       "id": 2
-    },
-    {
-      "email": "manu@manu.com",
-      "pass": "manuel",
-      "id": 3
-    },
-    {
-      "email": "eve.holt@reqres.in",
-      "pass": "cityslicka",
-      "id": 4
-    },
-    {
-      "email": "eve.holt@reqres.in",
-      "pass": "cityslicka",
-      "id": 5
-    },
-    {
-      "email": "eve.holt@reqres.in",
-      "pass": "cityslicka",
-      "id": 6
-    },
-    {
-      "email": "eve.holt@reqres.in",
-      "pass": "cityslicka",
-      "id": 7
-    },
-    {
-      "email": "eve.holt@reqres.in",
-      "pass": "cityslicka",
-      "id": 8
     }
   ],
   "comments": [
@@ -48,7 +18,6 @@
       "postId": 1
     }
   ],
-
   "profile": {
     "name": "typicode"
   },
@@ -175,7 +144,6 @@
       "imagen": "../../../assets/img/team/imagen6.jpeg",
       "linkedin": "https://www.linkedin.com/in/manuleivaok/"
     },
-
     {
       "id": 7,
       "name": "Franco Ezequiel Radicci",
@@ -194,7 +162,7 @@
       "id": 9,
       "name": "Nicolás Gabriel Capell",
       "descripcion": "Desarrollador Web",
-      "imagen": "../../../assets/img/team/imagen8.jpeg",    
+      "imagen": "../../../assets/img/team/imagen8.jpeg",
       "linkedin": "https://www.linkedin.com/in/manuleivaok/"
     },
     {

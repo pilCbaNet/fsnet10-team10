@@ -9,6 +9,7 @@ import { Login } from '../models/login.model';
   selector: 'app-login',
   templateUrl: './login.component.html',
 })
+
 export class LoginComponent {
   miLogin: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
@@ -39,8 +40,6 @@ export class LoginComponent {
         console.log(resp);
       });
     }
-
-
     
   }
 }
