@@ -8,6 +8,8 @@ import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { PageRoutingModule } from './pages-routing.module';
 import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { EnviarComponent } from './enviar/enviar.component';
+import { RecibirComponent } from './recibir/recibir.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { SidebarComponent } from '../shared/sidebar/sidebar.component';
     AboutComponent,
     ContactComponent,
     MainComponent,
-    SidebarComponent
+    SidebarComponent,
+    EnviarComponent,
+    RecibirComponent
   ],
   imports: [
     CommonModule,
