@@ -20,7 +20,7 @@
     </div>
   </div>
   <h2 class="text-center colorVerde mt-5">Movimientos historicos</h2>
-  <table class="table mt-2 bg-white shadow">
+  <!-- <table class="table mt-2 bg-white shadow">
     <thead>
       <tr class="table-dark">
         <th scope="col"></th>
@@ -50,5 +50,12 @@
         <td>{{ "1293" | currency }}</td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
+  <ng-container *ngIf="listTransaction;else Loading" >
+    <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
+  </ng-container>
+  <ng-template #Loading>
+    <app-spinner></app-spinner>
+  </ng-template>
+  <a routerLink="/main/transaction">Ver todas las Transacciones</a>
 </div>

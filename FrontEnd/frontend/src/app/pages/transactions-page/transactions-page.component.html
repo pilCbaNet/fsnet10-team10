@@ -1,0 +1,12 @@
+<main class="main-transactions">
+  <h2 class="title-page-transacions">Mis Transacciones</h2>
+  <ng-container *ngIf="listTransaction;else Loading" >
+    <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
+  </ng-container>
+  <ng-template #Loading>
+    <app-spinner></app-spinner>
+  </ng-template>
+</main>
+
+
+
