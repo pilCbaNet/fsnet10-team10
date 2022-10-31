@@ -41,8 +41,8 @@
       "status" : "Pending",
       "cripto": "",
       "typeCrypto": "",
-      "amount": "10",
-      "typeMoney": "USD",
+      "amount": "10.356",
+      "typeMoney": "$",
       "date": "21/02/21 15:26"
     },
     {
@@ -52,8 +52,8 @@
       "status" : "Done",
       "cripto": "",
       "typeCrypto": "",
-      "amount": "140",
-      "typeMoney": "USD",
+      "amount": "14.000",
+      "typeMoney": "$",
       "date": "14/02/21 08:00"
     },
     {
@@ -63,8 +63,8 @@
       "status" : "Done",
       "cripto": "",
       "typeCrypto": "",
-      "amount": "56",
-      "typeMoney": "USD",
+      "amount": "5.669",
+      "typeMoney": "$",
       "date": "14/06/21 09:56"
     },
     {
@@ -74,8 +74,8 @@
       "status" : "Done",
       "cripto": "",
       "typeCrypto": "",
-      "amount": "89",
-      "typeMoney": "USD",
+      "amount": "8.549",
+      "typeMoney": "$",
       "date": "26/06/21 15:45"
     },
     {
@@ -85,8 +85,8 @@
       "status" : "Done",
       "cripto": "0.03",
       "typeCrypto": "BTC",
-      "amount": "50",
-      "typeMoney": "USD",
+      "amount": "5.045",
+      "typeMoney": "$",
       "date": "30/06/21"
     },
     {
@@ -96,8 +96,8 @@
       "status" : "Done",
       "cripto": "",
       "typeCrypto": "",
-      "amount": "150",
-      "typeMoney": "USD",
+      "amount": "1.5360",
+      "typeMoney": "$",
       "date": "05/01/21 12:12"
     }
   ],

@@ -18,14 +18,14 @@
           <ng-container *ngIf="transaction.type === 'shipment' || transaction.type === 'purchased';else Plus">
             <div class="amount-container">
               <!-- <p class="amount-transaction">- {{transaction.cripto}} {{transaction.typeCrypto}}</p> -->
-              <p class="total-transaction less"> - {{transaction.typeMoney}} {{transaction.amount}}</p>
+              <p class="total-transaction less"> - {{transaction.typeMoney}}{{transaction.amount}}</p>
             </div>
           </ng-container >
 
           <ng-template #Plus>
             <div class="amount-container">
               <!-- <p class="amount-transaction">+ {{transaction.cripto}} {{transaction.typeCrypto}}</p> -->
-              <p class="total-transaction plus" > + {{transaction.typeMoney}} {{transaction.amount}}</p>
+              <p class="total-transaction plus" > + {{transaction.typeMoney}}{{transaction.amount}}</p>
             </div>
           </ng-template>
         </div>
