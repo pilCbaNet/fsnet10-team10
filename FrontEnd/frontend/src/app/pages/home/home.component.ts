@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Transaction } from 'src/app/models/transaction.model';
@@ -5,10 +6,12 @@ import { TransactionService } from 'src/app/services/transaction.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent  {
   listTransaction: Transaction[] | undefined;
+  errorResponseTransaction: HttpErrorResponse | undefined;
   constructor( private router: Router, private transactionService: TransactionService ) { }
     ngOnInit(): void{
       this.transactionService.obtainListTransactions().subscribe(
@@ -24,7 +27,13 @@ export class HomeComponent  {
             })
 
           },
-          error: (error) => console.error(error),
+          error: (error) => {
+
+            // Simulacion de espera del pedido antes del error
+            setTimeout(()=>{
+              this.errorResponseTransaction = error
+            }, 10000)
+          },
           complete: ()=> console.info('Peticion terminada')
         }
         )

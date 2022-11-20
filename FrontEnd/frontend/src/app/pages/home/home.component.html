@@ -55,7 +55,12 @@
     <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
   </ng-container>
   <ng-template #Loading>
-    <app-spinner></app-spinner>
+    <ng-container *ngIf="!errorResponseTransaction else Error" >
+      <app-spinner></app-spinner>
+    </ng-container>
+    <ng-template #Error>
+      <p class="text-error-info">Hubo un error al cargar las transferencias, por favor vuelva intentar mas tarde</p>
+    </ng-template>
   </ng-template>
   <button routerLink="/main/transaction" class="btn boton mt-2 mb-2">Ver todas las Transacciones</button>
 </div>

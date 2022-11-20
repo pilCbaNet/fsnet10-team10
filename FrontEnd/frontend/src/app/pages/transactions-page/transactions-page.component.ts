@@ -1,3 +1,4 @@
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Transaction } from 'src/app/models/transaction.model';
 import { TransactionService } from 'src/app/services/transaction.service';
@@ -9,6 +10,8 @@ import { TransactionService } from 'src/app/services/transaction.service';
 })
 export class TransactionsPageComponent implements OnInit {
   listTransaction: Transaction[] | undefined;
+  httpError: HttpErrorResponse | undefined;
+  
   constructor(private transactionService: TransactionService ) { }
 
   ngOnInit(): void {
@@ -17,10 +20,13 @@ export class TransactionsPageComponent implements OnInit {
         next: (response: Transaction[])=>{
           this.listTransaction = response
         },
-        error: (error) => console.error(error),
+        error: (error) => {
+          // console.log(error)
+          this.httpError = error
+        },
         complete: ()=> console.info('Peticion terminada')
       }
-      )
+    )
   }
 
 }

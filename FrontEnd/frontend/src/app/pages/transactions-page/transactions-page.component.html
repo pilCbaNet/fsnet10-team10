@@ -1,11 +1,26 @@
 <main class="main-transactions">
   <h2 class="title-page-transacions">Mis Transacciones</h2>
-  <ng-container *ngIf="listTransaction;else Loading" >
-    <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
+
+
+  <ng-container *ngIf="!listTransaction;else Loading" >
+    <ng-container *ngIf="!httpError">
+      <div>
+        <app-spinner></app-spinner>
+      </div>
+    </ng-container>
+    
   </ng-container>
   <ng-template #Loading>
-    <app-spinner></app-spinner>
+    <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
   </ng-template>
+
+  <ng-container *ngIf="httpError">
+    <div>
+      <app-error-response></app-error-response>
+      
+    </div>
+  </ng-container>
+    
   <button routerLink="/main/home" class="btn boton mt-4">Volver</button>
 </main>
 
