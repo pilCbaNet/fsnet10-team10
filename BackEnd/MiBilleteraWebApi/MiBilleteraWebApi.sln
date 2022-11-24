@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiBilleteraWebApi", "MiBilleteraWebApi\MiBilleteraWebApi.csproj", "{A3196E0D-4821-43B2-8A6C-8A8D8053B05C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3196E0D-4821-43B2-8A6C-8A8D8053B05C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3196E0D-4821-43B2-8A6C-8A8D8053B05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3196E0D-4821-43B2-8A6C-8A8D8053B05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3196E0D-4821-43B2-8A6C-8A8D8053B05C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD9C1DA4-795C-461B-9D21-E48AEF13707B}
+	EndGlobalSection
+EndGlobal

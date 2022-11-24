@@ -1,7 +1,7 @@
 USE [master]
 GO
 
-/****** Object:  Database [BilleteraVirtual]    Script Date: 14/11/2022 19:45:51 ******/
+/****** Object:  Database [BilleteraVirtual]    Script Date: 23/11/2022 21:21:40 ******/
 CREATE DATABASE [BilleteraVirtual]
  CONTAINMENT = NONE
  ON  PRIMARY 
