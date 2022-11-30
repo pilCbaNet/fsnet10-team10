@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Entities;
 using MiBilleteraWebApi.Models;
 
 namespace MiBilleteraWebApi.Controllers
@@ -29,18 +30,7 @@ namespace MiBilleteraWebApi.Controllers
 
         // GET: api/Provincias/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Provincia>> GetProvincia(int id)
-        {
-            var provincia = await _context.Provincia.FindAsync(id);
-
-            if (provincia == null)
-            {
-                return NotFound();
-            }
-
-            return provincia;
-        }
-
+        
         // PUT: api/Provincias/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

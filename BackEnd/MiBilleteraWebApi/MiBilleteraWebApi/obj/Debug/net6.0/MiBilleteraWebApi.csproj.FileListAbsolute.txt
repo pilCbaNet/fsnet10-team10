@@ -334,3 +334,5 @@ C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWeb
 C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\Entities.dll
+C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\Entities.pdb
