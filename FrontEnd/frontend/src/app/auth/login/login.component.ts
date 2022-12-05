@@ -11,6 +11,7 @@ import { Login } from '../models/login.model';
 })
 
 export class LoginComponent {
+
   miLogin: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     pass: ['', [Validators.required, Validators.minLength(6)]],
@@ -39,7 +40,7 @@ export class LoginComponent {
         this.router.navigate(['./main/home']);
         
       });
-    }
+    } 
     
   }
 }
