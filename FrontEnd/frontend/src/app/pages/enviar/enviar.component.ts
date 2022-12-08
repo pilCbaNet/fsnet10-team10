@@ -15,13 +15,6 @@ export class EnviarComponent implements OnInit {
     montoEnviar: ['', [Validators.required]],
   });
 
-  get cbuEnviar() {
-    return this.enviarDinero.get('cbuEnviar');
-  }
-
-  get montoEnviar() {
-    return this.enviarDinero.get('montoEnviar');
-  }
 
   constructor(private fb: FormBuilder,
               private router: Router,) { }

@@ -1,16 +1,44 @@
-<form>
+<form autocomplete="off" [formGroup]="registro" (ngSubmit)="crearCuenta()">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Dirección email</label>
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" formControlName="nombre"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Apellido</label>
+    <input type="text" class="form-control" formControlName="apellido"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Nombre de usuario</label>
+    <input type="text" class="form-control" formControlName="nombreUsuario"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Email</label>
     <input
       type="email"
       class="form-control"
-      id="exampleInputEmail1"
       aria-describedby="emailHelp"
+      formControlName="email"
     />
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
+    <label class="form-label">CUIL</label>
+    <input type="number" class="form-control" formControlName="CUIL"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Localidad de residencia</label>
+    <input type="text" class="form-control" formControlName="localidad"/>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Fecha de nacimiento</label>
+    <input type="date" class="form-control" formControlName="fechaNacimiento"/>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="pass"/>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Repetir password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" formControlName="pass2"/>
   </div>
   <div class="mb-3">
     <p>Si tienes una cuenta, <a routerLink="/iniciar-sesion" type="button" class="text-uppercase">inicia sesión</a></p>
