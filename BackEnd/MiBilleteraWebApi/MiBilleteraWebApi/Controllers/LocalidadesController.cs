@@ -1,46 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Entities;
+using MiBilleteraWebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Entities;
-using MiBilleteraWebApi.Models;
 using Negocio;
 
 namespace MiBilleteraWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProvinciasController : ControllerBase
+    public class LocalidadesController : ControllerBase
     {
+
+
+
         [HttpGet]
-        public List<Provincia> Get()
+        public List<Localidad> Get()
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                return db.Provincia/*.Include(a => a.Localidad)*/.ToList();
+                return db.Localidad.ToList();
             }
         }
 
-       
+
         [HttpGet("{id}")]
-        public Provincia? Get(int id)
+        public Localidad? Get(int id)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                return new ProvinciaBC().ObtenerProvincia(db, id);
+                return new LocalidadBC().Obtener(db, id);
             }
 
         }
 
         [HttpPost]
-        public void Post([FromBody] Provincia provincia)
+        public void Post([FromBody] Localidad localidad)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                new ProvinciaBC().agregarProvincia(db, provincia);
+                new LocalidadBC().agregar(db, localidad);
 
             }
 
@@ -48,18 +46,18 @@ namespace MiBilleteraWebApi.Controllers
 
 
         [HttpPut]
-        public void Put(int id, string NombreProvincia)
+        public void Put(int id, string? NombreLocalidad, string? Domicilio, int? idProvincia)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                new ProvinciaBC().modificar(db, id, NombreProvincia);
+                new LocalidadBC().modificar(db, id, NombreLocalidad, Domicilio, idProvincia);
             }
 
         }
 
 
 
-        
+
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -67,8 +65,8 @@ namespace MiBilleteraWebApi.Controllers
             {
                 using (var db = new MiBilleteraVirtualContext())
                 {
-                   
-                    new ProvinciaBC().eliminarProvincia(db, id);
+
+                    new LocalidadBC().eliminar(db, id);
 
                 }
 
@@ -78,9 +76,6 @@ namespace MiBilleteraWebApi.Controllers
 
                 throw;
             }
-
-
         }
-
     }
 }

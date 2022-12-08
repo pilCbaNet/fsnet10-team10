@@ -1,46 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Entities;
+using MiBilleteraWebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Entities;
-using MiBilleteraWebApi.Models;
 using Negocio;
 
 namespace MiBilleteraWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProvinciasController : ControllerBase
+    public class CuentasController : ControllerBase
     {
         [HttpGet]
-        public List<Provincia> Get()
+        public List<Cuenta> Get()
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                return db.Provincia/*.Include(a => a.Localidad)*/.ToList();
+                return db.Cuenta.ToList();
             }
         }
 
-       
+
         [HttpGet("{id}")]
-        public Provincia? Get(int id)
+        public Cuenta? Get(int id)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                return new ProvinciaBC().ObtenerProvincia(db, id);
+                return new CuentaBC().Obtener(db, id);
             }
 
         }
 
         [HttpPost]
-        public void Post([FromBody] Provincia provincia)
+        public void Post([FromBody] Cuenta cuenta)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                new ProvinciaBC().agregarProvincia(db, provincia);
+                new CuentaBC().agregar(db, cuenta);
 
             }
 
@@ -48,18 +43,18 @@ namespace MiBilleteraWebApi.Controllers
 
 
         [HttpPut]
-        public void Put(int id, string NombreProvincia)
+        public void Put(int id, double? Saldo, long? Cvu, bool? Habilitado, int? IdUsuario)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                new ProvinciaBC().modificar(db, id, NombreProvincia);
+                new CuentaBC().modificar(db, id, Saldo, Cvu, Habilitado, IdUsuario);
             }
 
         }
 
 
 
-        
+
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
@@ -67,8 +62,8 @@ namespace MiBilleteraWebApi.Controllers
             {
                 using (var db = new MiBilleteraVirtualContext())
                 {
-                   
-                    new ProvinciaBC().eliminarProvincia(db, id);
+
+                    new CuentaBC().eliminar(db, id);
 
                 }
 
@@ -78,9 +73,6 @@ namespace MiBilleteraWebApi.Controllers
 
                 throw;
             }
-
-
         }
-
     }
 }

@@ -12,6 +12,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.11",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.11",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.10",
+          "Negocio": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -2279,6 +2280,14 @@
         "runtime": {
           "Entities.dll": {}
         }
+      },
+      "Negocio/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0"
+        },
+        "runtime": {
+          "Negocio.dll": {}
+        }
       }
     }
   },
@@ -3521,6 +3530,11 @@
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
     "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Negocio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

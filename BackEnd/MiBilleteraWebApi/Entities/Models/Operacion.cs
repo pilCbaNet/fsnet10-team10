@@ -12,6 +12,6 @@ namespace Entities
         public bool? Extraccion { get; set; }
         public int? IdCuenta { get; set; }
 
-        public virtual Cuenta? IdCuentaNavigation { get; set; }
+        //public virtual Cuenta? IdCuentaNavigation { get; set; }
     }
 }

@@ -5,18 +5,18 @@ namespace Entities
 {
     public partial class Cuenta
     {
-        public Cuenta()
-        {
-            Operacions = new HashSet<Operacion>();
-        }
+        //public Cuenta()
+        //{
+        //    Operacion = new HashSet<Operacion>();
+        //}
 
         public int IdCuenta { get; set; }
         public double? Saldo { get; set; }
-        public string? Cvu { get; set; }
+        public long? Cvu { get; set; }
         public bool? Habilitado { get; set; }
         public int? IdUsuario { get; set; }
 
-        public virtual Usuario? IdUsuarioNavigation { get; set; }
-        public virtual ICollection<Operacion> Operacions { get; set; }
+        //public virtual Usuario? IdUsuarioNavigation { get; set; }
+        //public virtual ICollection<Operacion> Operacion { get; set; }
     }
 }
