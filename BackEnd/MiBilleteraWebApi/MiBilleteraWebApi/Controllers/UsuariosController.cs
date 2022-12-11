@@ -1,43 +1,42 @@
 ﻿using Entities;
-
 using MiBilleteraWebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Negocio;
+using System.Security.Authentication;
 
 namespace MiBilleteraWebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CuentasController : ControllerBase
+    public class UsuariosController : ControllerBase
     {
-
         [HttpGet]
-        public List<Cuenta> Get()
+        public List<Usuario> Get()
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                return db.Cuenta.ToList();
+                return db.Usuario.ToList();
             }
         }
 
 
         [HttpGet("{id}")]
-        public Cuenta? Get(int id)
+        public Usuario? Get(int id)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                return new CuentaBC().Obtener(db, id);
+                return new UsuarioBC().Obtener(db, id);
             }
 
         }
 
         [HttpPost]
-        public void Post([FromBody] Cuenta cuenta)
+        public void Post([FromBody] Usuario usuario)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                new CuentaBC().agregar(db, cuenta);
+                new UsuarioBC().agregar(db, usuario);
 
             }
 
@@ -45,11 +44,11 @@ namespace MiBilleteraWebApi.Controllers
 
 
         [HttpPut]
-        public void Put(int id, Double? Saldo, long? Cvu, bool? Habilitado, int? IdUsuario)
+        public void Put(int id, string? Nombre, string? Apellido, long? Cuil, string? NombreUsuario, string? Email, string? Contraseña, int? IdLocalidad)
         {
             using (var db = new MiBilleteraVirtualContext())
             {
-                new CuentaBC().modificar(db, id, Saldo, Cvu, Habilitado, IdUsuario);
+                new UsuarioBC().modificar(db, id, Nombre, Apellido, Cuil, NombreUsuario, Email, Contraseña, IdLocalidad);
             }
 
         }
@@ -65,7 +64,7 @@ namespace MiBilleteraWebApi.Controllers
                 using (var db = new MiBilleteraVirtualContext())
                 {
 
-                    new CuentaBC().eliminar(db, id);
+                    new UsuarioBC().eliminar(db, id);
 
                 }
 
@@ -78,6 +77,3 @@ namespace MiBilleteraWebApi.Controllers
         }
     }
 }
-
-    
-

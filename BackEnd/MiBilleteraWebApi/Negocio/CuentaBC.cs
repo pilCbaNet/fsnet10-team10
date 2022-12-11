@@ -1,5 +1,7 @@
 ﻿using Entities;
 using MiBilleteraWebApi.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    public class CuentaBC
+
+    public class CuentaBC 
     {
         //get by id
         public Cuenta? Obtener(MiBilleteraVirtualContext db, int id)
@@ -20,7 +23,6 @@ namespace Negocio
         //post
         public Cuenta agregar(MiBilleteraVirtualContext db, Cuenta cuenta)
         {
-
             db.Cuenta.Add(cuenta);
             db.SaveChanges();
             return cuenta;
@@ -28,17 +30,19 @@ namespace Negocio
 
 
         //put
-        public Cuenta? modificar(MiBilleteraVirtualContext db, int id, double? Saldo, long? Cvu, bool? Habilitado, int? IdUsuario)
+        public Cuenta? modificar(MiBilleteraVirtualContext db, int id, Double? Saldo, long? Cvu, bool? Habilitado, int? IdUsuario)
         {
             Cuenta? cuenta = db.Cuenta.FirstOrDefault(a => a.IdCuenta == id);
+
+            cuenta.IdUsuario = IdUsuario;
             cuenta.Saldo = Saldo;
             cuenta.Cvu = Cvu;
-            cuenta.Habilitado = Habilitado;
-            cuenta.IdUsuario = IdUsuario;
+            cuenta.Habilitado= Habilitado;  
 
             db.SaveChanges();
             return cuenta;
         }
+
 
 
         //Delete
@@ -58,4 +62,7 @@ namespace Negocio
 
         }
     }
+
+
 }
+

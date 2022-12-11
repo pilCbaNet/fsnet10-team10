@@ -17,12 +17,12 @@ namespace MiBilleteraWebApi.Models
         {
         }
 
-        public virtual DbSet<Cuenta> Cuenta { get; set; } = null!;
-        public virtual DbSet<Localidad> Localidad { get; set; } = null!;
-        public virtual DbSet<Moneda> Moneda { get; set; } = null!;
-        public virtual DbSet<Operacion> Operacion { get; set; } = null!;
-        public virtual DbSet<Provincia> Provincia { get; set; } = null!;
-        public virtual DbSet<Usuario> Usuario { get; set; } = null!;
+        public virtual DbSet<Cuenta> Cuenta { get; set; }
+        public virtual DbSet<Localidad> Localidad { get; set; }
+        public virtual DbSet<Moneda> Moneda { get; set; }
+        public virtual DbSet<Operacion> Operacion { get; set; }
+        public virtual DbSet<Provincia> Provincia { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -50,10 +50,10 @@ namespace MiBilleteraWebApi.Models
 
                 entity.Property(e => e.IdUsuario).HasColumnName("idUsuario");
 
-                //entity.HasOne(d => d.IdUsuarioNavigation)
-                //    .WithMany(p => p.Cuenta)
-                //    .HasForeignKey(d => d.IdUsuario)
-                //    .HasConstraintName("FK__Cuenta__idUsuari__1DE57479");
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Cuenta)
+                    .HasForeignKey(d => d.IdUsuario)
+                    .HasConstraintName("FK__Cuenta__idUsuari__1DE57479");
             });
 
             modelBuilder.Entity<Localidad>(entity =>
@@ -75,10 +75,10 @@ namespace MiBilleteraWebApi.Models
                     .IsUnicode(false)
                     .HasColumnName("NombreLocalidad");
 
-                //entity.HasOne(d => d.IdProvinciaNavigation)
-                //    .WithMany(p => p.Localidad)
-                //    .HasForeignKey(d => d.IdProvincia)
-                //    .HasConstraintName("FK__Localidad__idPro__1B0907CE");
+                entity.HasOne(d => d.IdProvinciaNavigation)
+                    .WithMany(p => p.Localidad)
+                    .HasForeignKey(d => d.IdProvincia)
+                    .HasConstraintName("FK__Localidad__idPro__1B0907CE");
             });
 
             modelBuilder.Entity<Moneda>(entity =>
@@ -94,10 +94,10 @@ namespace MiBilleteraWebApi.Models
 
                 entity.Property(e => e.Nombre).IsUnicode(false);
 
-                //entity.HasOne(d => d.IdUsuarioNavigation)
-                //    .WithMany(p => p.Moneda)
-                //    .HasForeignKey(d => d.IdUsuario)
-                //    .HasConstraintName("FK__Moneda__idUsuari__1ED998B2");
+                entity.HasOne(d => d.IdUsuarioNavigation)
+                    .WithMany(p => p.Moneda)
+                    .HasForeignKey(d => d.idUsuario)
+                    .HasConstraintName("FK__Moneda__idUsuari__1ED998B2");
             });
 
             modelBuilder.Entity<Operacion>(entity =>
@@ -115,10 +115,10 @@ namespace MiBilleteraWebApi.Models
 
                 entity.Property(e => e.IdCuenta).HasColumnName("idCuenta");
 
-                //entity.HasOne(d => d.IdCuentaNavigation)
-                //    .WithMany(p => p.Operacion)
-                //    .HasForeignKey(d => d.IdCuenta)
-                //    .HasConstraintName("FK__Operacion__idCue__1CF15040");
+                entity.HasOne(d => d.IdCuentaNavigation)
+                    .WithMany(p => p.Operacion)
+                    .HasForeignKey(d => d.IdCuenta)
+                    .HasConstraintName("FK__Operacion__idCue__1CF15040");
             });
 
             modelBuilder.Entity<Provincia>(entity =>
@@ -162,10 +162,10 @@ namespace MiBilleteraWebApi.Models
 
                 entity.Property(e => e.NombreUsuario).IsUnicode(false);
 
-                //entity.HasOne(d => d.IdLocalidadNavigation)
-                //    .WithMany(p => p.Usuarios)
-                //    .HasForeignKey(d => d.IdLocalidad)
-                //    .HasConstraintName("FK__Usuario__idLocal__1BFD2C07");
+                entity.HasOne(d => d.IdLocalidadNavigation)
+                    .WithMany(p => p.Usuarios)
+                    .HasForeignKey(d => d.IdLocalidad)
+                    .HasConstraintName("FK__Usuario__idLocal__1BFD2C07");
             });
 
             OnModelCreatingPartial(modelBuilder);

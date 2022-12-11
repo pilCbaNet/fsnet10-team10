@@ -338,3 +338,5 @@ C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWeb
 C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\obj\Debug\net6.0\MiBilleteraWebApi.pdb
 C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\obj\Debug\net6.0\MiBilleteraWebApi.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\obj\Debug\net6.0\ref\MiBilleteraWebApi.dll
+C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Usuario\Desktop\fsnet10-team10\BackEnd\MiBilleteraWebApi\MiBilleteraWebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
