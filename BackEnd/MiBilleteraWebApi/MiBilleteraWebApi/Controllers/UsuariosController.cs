@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Entities.Models;
 using MiBilleteraWebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -52,6 +53,20 @@ namespace MiBilleteraWebApi.Controllers
             }
 
         }
+
+        [HttpPost]
+        [Route("/api/login/")]
+        public Usuario? Post([FromBody] VistaLogin oUsuario)
+        {
+            Usuario oUsuarioRestult;
+            using (var db = new MiBilleteraVirtualContext())
+            {
+                oUsuarioRestult = new UsuarioBC().Login(db, oUsuario.NombreUsuario, oUsuario.Contraseña);
+            }
+            return oUsuarioRestult;
+        }
+
+
 
 
 
