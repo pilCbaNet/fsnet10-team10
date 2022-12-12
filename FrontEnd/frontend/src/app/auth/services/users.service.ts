@@ -16,4 +16,8 @@ export class UsersService {
    return this.http.post('http://localhost:3000/posts', login)
       
   }
+
+  crearCuenta(){
+    console.log('cuenta creada');
+  }
 }

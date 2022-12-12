@@ -24,6 +24,7 @@ export class LoginComponent {
   get pass() {
     return this.miLogin.get('pass');
   }
+  
   constructor(
     private fb: FormBuilder,
     private router: Router,
