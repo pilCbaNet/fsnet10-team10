@@ -1,19 +1,150 @@
-<form>
+<form autocomplete="off" [formGroup]="registro" (ngSubmit)="crearCuenta()">
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <label class="form-label">Nombre</label>
+    <input type="text" class="form-control" formControlName="nombre" />
+  </div>
+  <div
+    *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)"
+    class="alert alert-danger"
+  >
+    <div *ngIf="nombre?.errors?.['required']">El nombre es obligatorio.</div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Apellido</label>
+    <input type="text" class="form-control" formControlName="apellido" />
+  </div>
+  <div
+    *ngIf="apellido?.invalid && (apellido?.dirty || apellido?.touched)"
+    class="alert alert-danger"
+  >
+    <div *ngIf="apellido?.errors?.['required']">
+      El apellido es obligatorio.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Nombre de usuario</label>
+    <input type="text" class="form-control" formControlName="nombreUsuario" />
+  </div>
+  <div
+    *ngIf="
+      nombreUsuario?.invalid && (nombreUsuario?.dirty || nombreUsuario?.touched)
+    "
+    class="alert alert-danger"
+  >
+    <div *ngIf="nombreUsuario?.errors?.['required']">
+      El nombre de usuario es obligatorio.
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
     <input
       type="email"
       class="form-control"
-      id="exampleInputEmail1"
       aria-describedby="emailHelp"
+      formControlName="email"
     />
   </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" />
+  <div
+    *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    class="alert alert-danger"
+  >
+    <div *ngIf="email?.errors?.['required']">Email es requerido.</div>
+    <div *ngIf="email?.errors?.['email']">Ingrese email válido.</div>
   </div>
+
   <div class="mb-3">
-    <p>Si tienes una cuenta, <a routerLink="/iniciar-sesion" type="button" class="text-uppercase">inicia sesión</a></p>
+    <label class="form-label">CUIL</label>
+    <input type="text" class="form-control" formControlName="CUIL" />
+  </div>
+  <div
+  *ngIf="
+    CUIL?.invalid && (CUIL?.dirty || CUIL?.touched)
+  "
+  class="alert alert-danger"
+>
+  <div *ngIf="CUIL?.errors?.['required']">
+    El CUIL es obligatorio.
+  </div>
+</div>
+
+
+  <div class="mb-3">
+    <label class="form-label">Localidad de residencia</label>
+    <input type="text" class="form-control" formControlName="localidad" />
+  </div>
+  <div
+  *ngIf="
+    localidad?.invalid && (localidad?.dirty || localidad?.touched)
+  "
+  class="alert alert-danger"
+>
+  <div *ngIf="localidad?.errors?.['required']">
+    La localidad es obligatorio.
+  </div>
+</div>
+
+  <div class="mb-3">
+    <label class="form-label">Fecha de nacimiento</label>
+    <input type="date" class="form-control" formControlName="fechaNacimiento" />
+  </div>
+  <div
+  *ngIf="
+    fechaNacimiento?.invalid && (fechaNacimiento?.dirty || fechaNacimiento?.touched)
+  "
+  class="alert alert-danger"
+>
+  <div *ngIf="fechaNacimiento?.errors?.['required']">
+    La fecha de nacimiento es obligatorio.
+  </div>
+</div>
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" formControlName="pass" />
+  </div>
+  <div
+  *ngIf="
+    pass?.invalid && (pass?.dirty || pass?.touched)
+  "
+  class="alert alert-danger"
+>
+  <div *ngIf="pass?.errors?.['required']">
+    El password es obligatorio.
+  </div>
+  <div *ngIf="pass?.errors?.['minlength']">
+    Debe contener al menos 6 caraceteres.
+  </div>
+</div>
+
+  <div class="mb-3">
+    <label class="form-label">Repetir password</label>
+    <input type="password" class="form-control" formControlName="pass2" />
+  </div>
+  <div
+  *ngIf="
+    pass2?.invalid && (pass2?.dirty || pass2?.touched)
+  "
+  class="alert alert-danger"
+>
+  <div *ngIf="pass2?.errors?.['required']">
+    El password es obligatorio.
+  </div>
+  <div *ngIf="pass2?.errors?.['minlength']">
+    Debe contener al menos 6 caraceteres.
+  </div>
+</div>
+
+  <div><p>Las contraseñas no coinciden</p></div>
+  <div class="mb-3">
+    <p>
+      Si tienes una cuenta,
+      <a routerLink="/iniciar-sesion" type="button" class="text-uppercase"
+        >inicia sesión</a
+      >
+    </p>
   </div>
   <button type="submit" class="btn btn-secondary">Crear cuenta</button>
 </form>

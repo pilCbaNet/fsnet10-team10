@@ -1,0 +1,30 @@
+<div
+  class="container d-flex justify-content-center align-items-center flex-column"
+>
+  <div class="card mt-2 shadow" style="width: 18rem">
+    <div
+      class="card-body d-flex flex-column justify-content-center align-items-center"
+    >
+      <p class="card-title text-center fs-3 colorVerde fw-bold">
+        Enviar dinero
+      </p>
+      <form autocomplete="off"
+      [formGroup]="enviarDinero"
+      (ngSubmit)="enviar()">
+        <div>
+          <label for="cbuEnviar" class="text-gray-600">Colocar CBU</label>
+          <input type="number" class="w-100 mb-4 mt-1" formControlName="cbuEnviar"/>
+        </div>
+        <div>
+          <label for="montoEnviar" class="text-gray-600">Dinero a enviar</label>
+          <input type="number" class="w-100 mb-4 mt-1" formControlName="montoEnviar"/>
+        </div>
+        <div>
+          <button routerLink="/main/home" class="btn boton me-2" type="submit">
+            Enviar dinero
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

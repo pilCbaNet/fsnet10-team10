@@ -10,13 +10,17 @@
       <p class="card-text text-center fw-bold fs-5">{{ "10253" | currency }}</p>
 
       <div>
-        <button class="btn boton me-2">Enviar dinero</button>
-        <button class="btn boton">Recibir dinero</button>
+        <button routerLink="/main/enviar" class="btn boton me-2">
+          Enviar dinero
+        </button>
+        <button routerLink="/main/recibir" class="btn boton">
+          Recibir dinero
+        </button>
       </div>
     </div>
   </div>
-  <h2 class="text-center colorVerde mt-5">Movimientos historicos</h2>
-  <table class="table mt-2 bg-white shadow">
+  <h2 class="text-center colorVerde mt-5">Movimientos históricos</h2>
+  <!-- <table class="table mt-2 bg-white shadow">
     <thead>
       <tr class="table-dark">
         <th scope="col"></th>
@@ -46,5 +50,12 @@
         <td>{{ "1293" | currency }}</td>
       </tr>
     </tbody>
-  </table>
+  </table> -->
+  <ng-container *ngIf="listTransaction;else Loading" >
+    <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
+  </ng-container>
+  <ng-template #Loading>
+    <app-spinner></app-spinner>
+  </ng-template>
+  <button routerLink="/main/transaction" class="btn boton mt-2 mb-2">Ver todas las Transacciones</button>
 </div>

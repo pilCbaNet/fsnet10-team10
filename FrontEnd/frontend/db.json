@@ -7,13 +7,18 @@
     },
     {
       "email": "man@manu.com",
-      "pass": "manuel",
-      "id": 2
+      "pass": "manjgkg",
+      "id": 20
     },
     {
-      "email": "manu@manu.com",
+      "email": "m@m.com",
+      "pass": "maneul",
+      "id": 21
+    },
+    {
+      "email": "m@m.com",
       "pass": "manuel",
-      "id": 3
+      "id": 22
     }
   ],
   "comments": [
@@ -23,7 +28,6 @@
       "postId": 1
     }
   ],
-
   "profile": {
     "name": "typicode"
   },
@@ -37,6 +41,74 @@
       "id": 2,
       "email": "chau@chau.com",
       "pass": 654321
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "description": "Transference",
+      "type": "shipment",
+      "status": "Pending",
+      "cripto": "",
+      "typeCrypto": "",
+      "amount": "10.356",
+      "typeMoney": "$",
+      "date": "21/02/21 15:26"
+    },
+    {
+      "id": 2,
+      "description": "Transference",
+      "type": "receive",
+      "status": "Done",
+      "cripto": "",
+      "typeCrypto": "",
+      "amount": "14.000",
+      "typeMoney": "$",
+      "date": "14/02/21 08:00"
+    },
+    {
+      "id": 3,
+      "description": "Transference",
+      "type": "receive",
+      "status": "Done",
+      "cripto": "",
+      "typeCrypto": "",
+      "amount": "5.669",
+      "typeMoney": "$",
+      "date": "14/06/21 09:56"
+    },
+    {
+      "id": 4,
+      "description": "Transference",
+      "type": "shipment",
+      "status": "Done",
+      "cripto": "",
+      "typeCrypto": "",
+      "amount": "8.549",
+      "typeMoney": "$",
+      "date": "26/06/21 15:45"
+    },
+    {
+      "id": 5,
+      "description": "Transference",
+      "type": "receive",
+      "status": "Done",
+      "cripto": "0.03",
+      "typeCrypto": "BTC",
+      "amount": "5.045",
+      "typeMoney": "$",
+      "date": "30/06/21"
+    },
+    {
+      "id": 6,
+      "description": "Transference",
+      "type": "shipment",
+      "status": "Done",
+      "cripto": "",
+      "typeCrypto": "",
+      "amount": "1.5360",
+      "typeMoney": "$",
+      "date": "05/01/21 12:12"
     }
   ],
   "about": [
@@ -82,7 +154,6 @@
       "imagen": "../../../assets/img/team/imagen6.jpeg",
       "linkedin": "https://www.linkedin.com/in/manuleivaok/"
     },
-
     {
       "id": 7,
       "name": "Franco Ezequiel Radicci",
@@ -95,19 +166,21 @@
       "name": "Marcos Exequiel Britos",
       "descripcion": "Desarrollador Web",
       "imagen": "../../../assets/img/team/imagen8.jpeg",
-      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+      "linkedin": "https://www.linkedin.com/in/marcos-britos/"
     },
     {
       "id": 9,
       "name": "Nicolás Gabriel Capell",
       "descripcion": "Desarrollador Web",
-      "imagen": "../../../assets/img/team/imagen8.jpeg",     "linkedin": "https://www.linkedin.com/in/manuleivaok/"
+      "imagen": "../../../assets/img/team/imagen8.jpeg",
+      "linkedin": "https://www.linkedin.com/in/manuleivaok/"
     },
     {
       "id": 10,
       "name": "Florencia Rocío Conci",
       "descripcion": "Desarrollador Web",
-      "imagen": "../../../assets/img/team/imagen8.jpeg"
+      "imagen": "../../../assets/img/team/imagen8.jpeg",
+      "linkedin": "https://www.linkedin.com/in/florencia-conci-4547861a0"
     },
     {
       "id": 11,

@@ -9,7 +9,9 @@ import { Login } from '../models/login.model';
   selector: 'app-login',
   templateUrl: './login.component.html',
 })
+
 export class LoginComponent {
+
   miLogin: FormGroup = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
     pass: ['', [Validators.required, Validators.minLength(6)]],
@@ -22,6 +24,7 @@ export class LoginComponent {
   get pass() {
     return this.miLogin.get('pass');
   }
+  
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -35,12 +38,10 @@ export class LoginComponent {
       let login: Login = new Login(email, pass);
 
       this.usersService.iniciarSesion(login).subscribe((resp) => {
-        this.router.navigate(['./home']);
-        console.log(resp);
+        this.router.navigate(['./main/home']);
+        
       });
-    }
-
-
+    } 
     
   }
 }

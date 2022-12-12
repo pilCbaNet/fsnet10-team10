@@ -1,32 +1,37 @@
 <form autocomplete="off" [formGroup]="miLogin" (ngSubmit)="login()">
   <!-- Email input -->
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <label for="email" class="form-label">Email</label>
     <input
       type="email"
-      class="form-control" 
-      id="exampleInputEmail1"
+      class="form-control"
+      id="email"
       aria-describedby="emailHelp"
       formControlName="email"
     />
   </div>
   <!-- Validacion email -->
-  <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="alert alert-danger">
+  <div
+    *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    class="alert alert-danger"
+  >
     <div *ngIf="email?.errors?.['required']">Email es requerido.</div>
     <div *ngIf="email?.errors?.['email']">Ingrese email válido.</div>
   </div>
   <!-- Password input -->
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <label for="password" class="form-label">Password</label>
     <input
       type="password"
       class="form-control"
-      id="exampleInputPassword1"
       formControlName="pass"
     />
   </div>
   <!-- Validacion password -->
-  <div *ngIf="pass?.invalid && (pass?.dirty || pass?.touched)" class="alert alert-danger">
+  <div
+    *ngIf="pass?.invalid && (pass?.dirty || pass?.touched)"
+    class="alert alert-danger"
+  >
     <div *ngIf="pass?.errors?.['required']">El password es requerido.</div>
     <div *ngIf="pass?.errors?.['minlength']">Su contraseña es corta.</div>
   </div>
@@ -41,16 +46,17 @@
         >crear una</a
       >
     </p>
-    <a routerLink="/iniciar-sesion/change"
-      >¿Olvidaste tu password?</a
-    >
+    <div class="divIngresar">
+      <a routerLink="/iniciar-sesion/change" class="forgotPassword"
+        >¿Olvidaste tu password?</a
+      >
+      <button
+        type="submit"
+        class="btn boton text-uppercase btnIngresar"
+        [disabled]="miLogin.invalid"
+      >
+        Ingresar
+      </button>
+    </div>
   </div>
-
-  <button
-    type="submit"
-    class="btn boton text-uppercase"
-    [disabled]="miLogin.invalid"
-  >
-    Ingresar
-  </button>
 </form>
