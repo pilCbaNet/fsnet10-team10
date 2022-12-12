@@ -53,6 +53,14 @@ namespace Negocio
 
         }
 
+        //login
+        public Usuario Login(MiBilleteraVirtualContext db, String NombreUsuario, String Contraseña)
+        {
+            return (Usuario?)db.Usuario.FirstOrDefault(a => a.NombreUsuario == NombreUsuario && a.Contraseña == Contraseña);
+
+        }
+
+
         //Get all
         public void listar(MiBilleteraVirtualContext db)
         {

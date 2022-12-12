@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Entities;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -166,6 +167,16 @@ namespace MiBilleteraWebApi.Models
                     .WithMany(p => p.Usuarios)
                     .HasForeignKey(d => d.IdLocalidad)
                     .HasConstraintName("FK__Usuario__idLocal__1BFD2C07");
+            });
+
+            modelBuilder.Entity<VistaLogin>(entity =>
+            {
+                entity.HasNoKey();
+                entity.ToView("VistaLogins");
+                entity.Property(e => e.NombreUsuario)
+                    .IsUnicode(false);
+                entity.Property(e => e.Contraseña)
+                    .IsUnicode(false);
             });
 
             OnModelCreatingPartial(modelBuilder);
