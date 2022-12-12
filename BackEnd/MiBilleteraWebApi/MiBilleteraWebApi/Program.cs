@@ -1,7 +1,20 @@
 using Negocio;
 using System.Text.Json.Serialization;
 
+var MyAllowSpecificOringins = "_myAllowSpecificOrigins";
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+//Cambiar el localhost segun el puerto donde corre la api
+builder.Services.AddCors(options => {
+    options.AddPolicy(name: MyAllowSpecificOringins, policy =>
+    {
+        policy.WithOrigins("https://localhost:44350/");
+        policy.AllowAnyMethod();
+        policy.AllowAnyHeader();
+    });
+});
 
 // Add services to the container.
 

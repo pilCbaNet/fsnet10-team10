@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj": {}
+    "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+    "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\nazar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -73,20 +73,20 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj": {
+    "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
+        "projectUniqueName": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
         "projectName": "Negocio",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\obj\\",
+        "projectPath": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
+        "packagesPath": "C:\\Users\\nazar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nazar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -101,8 +101,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\Desktop\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+              "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\nazar\\Documents\\Proyecto\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj"
               }
             }
           }
