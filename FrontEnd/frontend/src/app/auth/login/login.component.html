@@ -1,30 +1,28 @@
 <form autocomplete="off" [formGroup]="miLogin" (ngSubmit)="login()">
   <!-- Email input -->
   <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
+    <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
     <input
-      type="email"
+      type="nombreUsuario"
       class="form-control"
-      id="email"
-      aria-describedby="emailHelp"
-      formControlName="email"
+      id="nombreUsuario"
+      aria-describedby="nombreUsuarioHelp"
+      formControlName="nombreUsuario"
     />
   </div>
   <!-- Validacion email -->
   <div
-    *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    *ngIf="nombreUsuario?.invalid && (nombreUsuario?.dirty || nombreUsuario?.touched)"
     class="alert alert-danger"
   >
-    <div *ngIf="email?.errors?.['required']">Email es requerido.</div>
-    <div *ngIf="email?.errors?.['email']">Ingrese email válido.</div>
+    <div *ngIf="nombreUsuario?.errors?.['required']">Nombre de usuario es requerido.</div>
   </div>
   <!-- Password input -->
   <div class="mb-3">
-    <label for="password" class="form-label">Contraseña</label>
+    <label for="password" class="form-label">Password</label>
     <input
       type="password"
       class="form-control"
-      id="password"
       formControlName="pass"
     />
   </div>
@@ -33,13 +31,13 @@
     *ngIf="pass?.invalid && (pass?.dirty || pass?.touched)"
     class="alert alert-danger"
   >
-    <div *ngIf="pass?.errors?.['required']">La contraseña es requerida.</div>
+    <div *ngIf="pass?.errors?.['required']">El password es requerido.</div>
     <div *ngIf="pass?.errors?.['minlength']">Su contraseña es corta.</div>
   </div>
 
   <div class="mb-3">
     <p>
-      ¿No tienes cuenta?
+      Si no tienes cuenta puedes
       <a
         routerLink="/iniciar-sesion/create"
         type="button"
@@ -49,7 +47,7 @@
     </p>
     <div class="divIngresar">
       <a routerLink="/iniciar-sesion/change" class="forgotPassword"
-        >¿Olvidaste tu contraseña?</a
+        >¿Olvidaste tu password?</a
       >
       <button
         type="submit"

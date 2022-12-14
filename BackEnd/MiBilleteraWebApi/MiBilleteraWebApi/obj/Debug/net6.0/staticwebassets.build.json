@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0qCTbP17SIXvcOpmm3YrKBs0jrGcv69YSzeJI4amBIc=",
+  "Source": "MiBilleteraWebApi",
+  "BasePath": "_content/MiBilleteraWebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

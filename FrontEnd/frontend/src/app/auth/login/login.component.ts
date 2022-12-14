@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import Swal from 'sweetalert2';
 import { UsersService } from '../services/users.service';
 import { Login } from '../models/login.model';
 
@@ -11,18 +11,20 @@ import { Login } from '../models/login.model';
 })
 
 export class LoginComponent {
+
   miLogin: FormGroup = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
+    nombreUsuario: ['', [Validators.required]],
     pass: ['', [Validators.required, Validators.minLength(6)]],
   });
 
-  get email() {
-    return this.miLogin.get('email');
+  get nombreUsuario() {
+    return this.miLogin.get('nombreUsuario');
   }
 
   get pass() {
     return this.miLogin.get('pass');
   }
+  
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -31,15 +33,25 @@ export class LoginComponent {
 
   login() {
     if(this.miLogin.valid) {
-      let email: string = this.miLogin.get('email')?.value;
-      let pass : string = this.miLogin.get('pass')?.value;
-      let login: Login = new Login(email, pass);
+      let nombreUsuario: string = this.miLogin.get('nombreUsuario')?.value;
+      let contraseña : string = this.miLogin.get('pass')?.value;
+      let login: Login = new Login(nombreUsuario, contraseña);
 
+      console.log(login);
       this.usersService.iniciarSesion(login).subscribe((resp) => {
-        this.router.navigate(['./main/home']);
-        
+        if(resp === null) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Credenciales incorrectas, contacte al administrador',
+            timer: 2000
+          });
+        } else {
+          console.log(resp);
+          this.router.navigate(['./main/home']);
+        }
       });
-    }
+    } 
     
   }
 }
