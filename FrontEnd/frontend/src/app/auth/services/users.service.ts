@@ -28,7 +28,7 @@ export class UsersService {
         if(resp != null){
           this._usuario = {
             nombreUsuario: resp.nombreUsuario!,
-            idUsuario: resp.uid!,
+            idUsuario: resp.idUsuario!,
           }
         }
       }));

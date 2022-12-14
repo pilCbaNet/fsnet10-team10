@@ -75,5 +75,27 @@ namespace MiBilleteraWebApi.Controllers
                 throw;
             }
         }
+        [HttpGet]
+        [Route("api/UltimosMovimientosAll")]
+        public List<Operacion> GetUltimosMoviminetosAll(int idCuenta)
+        {
+            List<Operacion> oListaResult;
+            using (var db = new MiBilleteraVirtualContext())
+            {
+                oListaResult = new UltimosMovimientosBC().ObtenerOperacion(db, idCuenta);
+            }
+            return oListaResult;
+        }
+        [HttpGet]
+        [Route("api/UltimosMovimientos")]
+        public List<Operacion> GetUltimosMoviminetos(int idCuenta, int cantidad)
+        {
+            List<Operacion> oListaResult;
+            using (var db = new MiBilleteraVirtualContext())
+            {
+                oListaResult = new UltimosMovimientosBC().ObtenerOperacion(db, idCuenta, cantidad);
+            }
+            return oListaResult;
+        }
     }
 }

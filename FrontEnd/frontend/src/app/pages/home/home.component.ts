@@ -14,7 +14,12 @@ export class HomeComponent {
     return this.userService.usuario;
   }
 
-  listTransaction: Transaction[] | undefined;
+  get saldo() {
+    return this.transactionService.saldo;
+  }
+
+  // listTransaction: Transaction[] | undefined;
+
   constructor(
     private router: Router,
     private transactionService: TransactionService,
@@ -22,19 +27,29 @@ export class HomeComponent {
   ) {}
   
   ngOnInit(): void {
-    this.transactionService.obtainListTransactions().subscribe({
-      next: (response: Transaction[]) => {
-        response.forEach((tran, i) => {
-          if (i === 0) {
-            this.listTransaction = [tran];
-          }
-          if (i < 5 && i !== 0) {
-            this.listTransaction?.push(tran);
-          }
-        });
-      },
-      error: (error) => console.error(error),
-      complete: () => console.info('Peticion terminada'),
-    });
+
+    // this.transactionService.obtainListTransactions().subscribe({
+    //   next: (response: Transaction[]) => {
+    //     response.forEach((tran, i) => {
+    //       if (i === 0) {
+    //         this.listTransaction = [tran];
+    //       }
+    //       if (i < 5 && i !== 0) {
+    //         this.listTransaction?.push(tran);
+    //       }
+    //     });
+    //   },
+    //   error: (error) => console.error(error),
+    //   complete: () => console.info('Peticion terminada'),
+    // });
+    this.consultarSaldo()
+  }
+
+  consultarSaldo(){
+    let id = this.usuario.idUsuario;
+    console.log(id);
+    this.transactionService.consultarSaldo(id).subscribe(resp => {
+      console.log('respuesta CONSULTA', resp)
+    })
   }
 }

@@ -8,19 +8,19 @@ import { TransactionService } from 'src/app/services/transaction.service';
   styleUrls: ['./transactions-page.component.css']
 })
 export class TransactionsPageComponent implements OnInit {
-  listTransaction: Transaction[] | undefined;
-  constructor(private transactionService: TransactionService ) { }
+  // listTransaction: Transaction[] | undefined;
+  // constructor(private transactionService: TransactionService ) { }
 
   ngOnInit(): void {
-    this.transactionService.obtainListTransactions().subscribe(
-      {
-        next: (response: Transaction[])=>{
-          this.listTransaction = response
-        },
-        error: (error) => console.error(error),
-        complete: ()=> console.info('Peticion terminada')
-      }
-      )
+    // this.transactionService.obtainListTransactions().subscribe(
+    //   {
+    //     next: (response: Transaction[])=>{
+    //       this.listTransaction = response
+    //     },
+    //     error: (error) => console.error(error),
+    //     complete: ()=> console.info('Peticion terminada')
+    //   }
+    //   )
   }
-
 }
+
