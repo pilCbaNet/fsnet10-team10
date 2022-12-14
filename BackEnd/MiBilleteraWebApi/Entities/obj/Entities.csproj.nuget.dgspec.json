@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nahue\\OneDrive\\Escritorio\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {}
+    "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nahue\\OneDrive\\Escritorio\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+    "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nahue\\OneDrive\\Escritorio\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\nahue\\OneDrive\\Escritorio\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\nahue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nahue\\OneDrive\\Escritorio\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\mleiva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nahue\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mleiva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
