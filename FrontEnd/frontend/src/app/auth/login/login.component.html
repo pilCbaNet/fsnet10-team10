@@ -1,22 +1,21 @@
 <form autocomplete="off" [formGroup]="miLogin" (ngSubmit)="login()">
   <!-- Email input -->
   <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
+    <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
     <input
-      type="email"
+      type="nombreUsuario"
       class="form-control"
-      id="email"
-      aria-describedby="emailHelp"
-      formControlName="email"
+      id="nombreUsuario"
+      aria-describedby="nombreUsuarioHelp"
+      formControlName="nombreUsuario"
     />
   </div>
   <!-- Validacion email -->
   <div
-    *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+    *ngIf="nombreUsuario?.invalid && (nombreUsuario?.dirty || nombreUsuario?.touched)"
     class="alert alert-danger"
   >
-    <div *ngIf="email?.errors?.['required']">Email es requerido.</div>
-    <div *ngIf="email?.errors?.['email']">Ingrese email válido.</div>
+    <div *ngIf="nombreUsuario?.errors?.['required']">Nombre de usuario es requerido.</div>
   </div>
   <!-- Password input -->
   <div class="mb-3">

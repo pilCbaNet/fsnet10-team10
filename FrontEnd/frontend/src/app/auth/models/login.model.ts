@@ -1,35 +1,9 @@
 export class Login{
-    email: string;
-    pass: string;
-
-    constructor(email: string, pass: string){
-        this.email = email;
-        this.pass = pass;
-    }
-}
-
-export class CrearCuenta{
-    nombre: string;
-    apellido: string;
     nombreUsuario: string;
-    email: string;
-    CUIL: string;
-    localidad: string;
-    fechaNacimiento: string;
-    pass: string;
-    pass2: string;
+    contraseña: string;
 
-
-    constructor(nombre: string, apellido: string, nombreUsuario: string, email: string, CUIL: string, localidad: string, fechaNacimiento: string, pass: string, pass2: string ){
-        this.nombre = nombre;
-        this.apellido = apellido;
+    constructor(nombreUsuario: string, contraseña: string){
         this.nombreUsuario = nombreUsuario;
-        this.email = email;
-        this.CUIL = CUIL;
-        this.localidad = localidad;
-        this.fechaNacimiento = fechaNacimiento;
-        this.pass = pass;
-        this.pass2 = pass2;
-
+        this.contraseña = contraseña;
     }
 }

@@ -87,34 +87,19 @@
 </div>
 
   <div class="mb-3">
-    <label class="form-label">Fecha de nacimiento</label>
-    <input type="date" class="form-control" formControlName="fechaNacimiento" />
-  </div>
-  <div
-  *ngIf="
-    fechaNacimiento?.invalid && (fechaNacimiento?.dirty || fechaNacimiento?.touched)
-  "
-  class="alert alert-danger"
->
-  <div *ngIf="fechaNacimiento?.errors?.['required']">
-    La fecha de nacimiento es obligatorio.
-  </div>
-</div>
-
-  <div class="mb-3">
     <label class="form-label">Password</label>
-    <input type="password" class="form-control" formControlName="pass" />
+    <input type="password" class="form-control" formControlName="password" />
   </div>
   <div
   *ngIf="
-    pass?.invalid && (pass?.dirty || pass?.touched)
+    password?.invalid && (password?.dirty || password?.touched)
   "
   class="alert alert-danger"
 >
-  <div *ngIf="pass?.errors?.['required']">
+  <div *ngIf="password?.errors?.['required']">
     El password es obligatorio.
   </div>
-  <div *ngIf="pass?.errors?.['minlength']">
+  <div *ngIf="password?.errors?.['minlength']">
     Debe contener al menos 6 caraceteres.
   </div>
 </div>
