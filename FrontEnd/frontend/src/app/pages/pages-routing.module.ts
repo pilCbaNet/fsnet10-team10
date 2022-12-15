@@ -15,7 +15,7 @@ const routes: Routes = [
       component: MainComponent,
       children: [
         { path: 'inicio', component:  HomeComponent,},
-        { path: 'contact', component:  ContactComponent},
+        // { path: 'contact', component:  ContactComponent},
         { path: 'about', component:  AboutComponent},
         { path: 'transaction', component:  TransactionsPageComponent},
         { path: 'enviar', component:  EnviarComponent},

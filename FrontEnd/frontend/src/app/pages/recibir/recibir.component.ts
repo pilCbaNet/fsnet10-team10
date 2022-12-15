@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Recepcion } from '../models/recibirDinero.model';
+import { TransactionService } from '../../services/transaction.service';
+import { UsersService } from '../../auth/services/users.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-recibir',
@@ -10,6 +13,18 @@ import { Recepcion } from '../models/recibirDinero.model';
 })
 
 export class RecibirComponent implements OnInit {
+
+  get usuario() {
+    return this.userService.usuario;
+  }
+
+  get saldo() {
+    return this.transactionService.saldo;
+  }
+
+  get transacciones() {
+    return this.transactionService.transacciones;
+  }
 
   recibirDinero: FormGroup = this.fb.group({
     cbuRecibir: ['', [Validators.required]],
@@ -25,18 +40,35 @@ export class RecibirComponent implements OnInit {
   }
 
   constructor(private fb: FormBuilder,
-    private router: Router) { }
+              private router: Router,
+              private transactionService: TransactionService,
+              private userService: UsersService) { }
 
   ngOnInit(): void {
   }
 
   recibir() {
     if(this.recibirDinero.valid) {
-      let cbuRecibir: number = this.recibirDinero.get('cbuRecibir')?.value;
-      let montoRecibir : number = this.recibirDinero.get('montoRecibir')?.value;
-      // let dineroARecibir: Recepcion = new Recepcion(cbuRecibir, montoRecibir);
-      console.log(cbuRecibir, montoRecibir)
-    }
-  }
+      let id = 112;
+      let Cvu = this.recibirDinero.get('cbuRecibir')?.value;
+      let Cantidad = this.recibirDinero.get('montoRecibir')?.value;
+      let CvuDestino = 56456456;
+      let idCuentaDestino = this.usuario.idUsuario;
 
+      this.transactionService.recibirDinero(id, Cvu, Cantidad, CvuDestino, idCuentaDestino).subscribe(resp => {
+        if(resp == true) {
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'El dinero se recibió correctamente',
+            showConfirmButton: false,
+            timer: 3000
+          });
+          this.router.navigateByUrl('/main')
+        }
+      })
+    }
+    
+  }
 }
+  

@@ -18,7 +18,9 @@ export class HomeComponent {
     return this.transactionService.saldo;
   }
 
-  // listTransaction: Transaction[] | undefined;
+  get transacciones() {
+    return this.transactionService.transacciones;
+  }
 
   constructor(
     private router: Router,
@@ -27,29 +29,21 @@ export class HomeComponent {
   ) {}
   
   ngOnInit(): void {
-
-    // this.transactionService.obtainListTransactions().subscribe({
-    //   next: (response: Transaction[]) => {
-    //     response.forEach((tran, i) => {
-    //       if (i === 0) {
-    //         this.listTransaction = [tran];
-    //       }
-    //       if (i < 5 && i !== 0) {
-    //         this.listTransaction?.push(tran);
-    //       }
-    //     });
-    //   },
-    //   error: (error) => console.error(error),
-    //   complete: () => console.info('Peticion terminada'),
-    // });
     this.consultarSaldo()
+    this.consultarMovimientos()
   }
 
   consultarSaldo(){
     let id = this.usuario.idUsuario;
-    console.log(id);
     this.transactionService.consultarSaldo(id).subscribe(resp => {
-      console.log('respuesta CONSULTA', resp)
+    })
+  }
+
+  consultarMovimientos(){
+    let idCuenta = '1';
+
+    this.transactionService.ultimosMovimientos(idCuenta).subscribe(resp => {
+      
     })
   }
 }

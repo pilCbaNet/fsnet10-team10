@@ -37,7 +37,6 @@ export class LoginComponent {
       let contraseña : string = this.miLogin.get('pass')?.value;
       let login: Login = new Login(nombreUsuario, contraseña);
 
-      console.log(login);
       this.usersService.iniciarSesion(login).subscribe((resp) => {
         if(resp === null) {
           Swal.fire({
@@ -47,7 +46,6 @@ export class LoginComponent {
             timer: 2000
           });
         } else {
-          console.log(resp);
           this.router.navigate(['./main/home']);
         }
       });

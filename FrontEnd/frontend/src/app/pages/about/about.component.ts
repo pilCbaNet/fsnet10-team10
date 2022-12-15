@@ -8,12 +8,10 @@ import { AboutService } from '../services/about-service';
 export class AboutComponent implements OnInit {
   about: any;
 
-  constructor( private aboutService: AboutService) { }
+  constructor( ) { }
 
   ngOnInit(): void {
-    this.aboutService.quienesSomosData().subscribe(data => {
-      this.about = data;
-    })
+
   }
 
 
