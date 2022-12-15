@@ -42,6 +42,61 @@ namespace Negocio
             db.SaveChanges();
             return cuenta;
         }
+        public bool Deposito(MiBilleteraVirtualContext db, int id, int? cantidad, long? Cvu) // sauqe el bool?
+        {
+            bool exito = false;
+            Cuenta? cuenta = db.Cuenta.FirstOrDefault(a => a.IdCuenta == id);
+            //Operacion operacionPivot = db.Operacion.Last(Operacion);
+            //int ultimoID = db.Operacion.Max(x => x.IdOperacion);
+            int idPivot = db.Operacion.OrderByDescending(x => x.IdOperacion).First().IdOperacion;
+            if (cuenta is not null && cuenta.Habilitado == true)
+            {
+                cuenta.Saldo += cantidad;
+                cuenta.Cvu = Cvu;
+                exito = true;
+            }
+            //cuenta.Habilitado = Habilitado; se puede sacar
+            if (exito == true)
+            {
+                Operacion? deposito = new Operacion();
+                deposito.IdOperacion = idPivot + 1;
+                deposito.IdCuenta = id;
+                deposito.Fecha = DateTime.Now;
+                deposito.Monto = cantidad;
+                deposito.Deposito = true;
+                deposito.Extraccion = false;
+                new OperacionBC().agregar(db, deposito);
+            }
+
+            db.SaveChanges();
+            return exito;
+        }
+        public bool Extraccion(MiBilleteraVirtualContext db, int id, int? cantidad, long? Cvu)
+        {
+            bool exito = false;
+            Cuenta? cuenta = db.Cuenta.FirstOrDefault(a => a.IdCuenta == id);
+            int idPivot = db.Operacion.OrderByDescending(x => x.IdOperacion).First().IdOperacion;
+            if (cuenta is not null && cuenta.Habilitado == true && cuenta.Saldo >= cantidad )
+            {
+                cuenta.Saldo -= cantidad;
+                cuenta.Cvu = Cvu;
+                exito = true;
+            }
+            if (exito == true)
+            {
+                Operacion deposito = new Operacion();
+                deposito.IdOperacion = idPivot + 1;
+                deposito.IdCuenta = id;
+                deposito.Fecha = DateTime.Now;
+                deposito.Monto = cantidad;
+                deposito.Deposito = false;
+                deposito.Extraccion = true;
+                new OperacionBC().agregar(db, deposito);
+            }
+
+            db.SaveChanges();
+            return exito;
+        }
 
 
 
