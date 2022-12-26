@@ -19,6 +19,11 @@
       "email": "m@m.com",
       "pass": "manuel",
       "id": 22
+    },
+    {
+      "email": "eve.holt@reqres.in",
+      "pass": "cityslicka",
+      "id": 23
     }
   ],
   "comments": [

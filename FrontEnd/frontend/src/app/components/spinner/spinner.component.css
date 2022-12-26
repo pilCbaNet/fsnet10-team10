@@ -6,7 +6,9 @@
   background-color: #4b9cdb;
 }
 
-
+.load-3{
+  margin: 10px;
+}
 
 
 .load-3 .line:nth-last-child(1) {

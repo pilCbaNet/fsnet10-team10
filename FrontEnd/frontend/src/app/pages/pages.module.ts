@@ -14,6 +14,7 @@ import { TransactionsPageComponent } from './transactions-page/transactions-page
 import { SpinnerComponent } from '../components/spinner/spinner.component';
 import { EnviarComponent } from './enviar/enviar.component';
 import { RecibirComponent } from './recibir/recibir.component';
+import { ErrorResponseComponent } from '../components/error-response/error-response.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RecibirComponent } from './recibir/recibir.component';
     TransactionsPageComponent,
     SpinnerComponent,
     EnviarComponent,
-    RecibirComponent
+    RecibirComponent,
+    ErrorResponseComponent
   ],
   imports: [
     CommonModule,
