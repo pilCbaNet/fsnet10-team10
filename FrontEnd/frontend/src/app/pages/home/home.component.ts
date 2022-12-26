@@ -16,7 +16,14 @@ export class HomeComponent {
     return this.userService.usuario;
   }
 
-  listTransaction: Transaction[] | undefined;
+  get saldo() {
+    return this.transactionService.saldo;
+  }
+
+  get transacciones() {
+    return this.transactionService.transacciones;
+  }
+
   constructor(
     private router: Router,
     private transactionService: TransactionService,
@@ -42,3 +49,4 @@ export class HomeComponent {
     })
   }
 }
+
