@@ -20,7 +20,7 @@ namespace Negocio
         {
             var listOperacion = db.Operacion.Where(x => x.IdCuenta == idCuenta).ToList();
             List<Operacion> movimientos = new List<Operacion>();
-            movimientos = listOperacion.OrderByDescending(x => x.Fecha).ToList(); ;
+            movimientos = listOperacion.OrderByDescending(x => x.IdOperacion).ToList(); ;
             return movimientos.OrderByDescending(x => x.Fecha).ToList();
         }
         public List<Operacion> ObtenerOperacion(MiBilleteraVirtualContext db, int idCuenta, int cant)

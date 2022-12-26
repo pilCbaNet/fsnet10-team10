@@ -34,15 +34,3 @@ C:\Users\Usuario\Desktop\RepoISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entit
 C:\Users\Usuario\Desktop\RepoISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\refint\Entities.dll
 C:\Users\Usuario\Desktop\RepoISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.pdb
 C:\Users\Usuario\Desktop\RepoISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\ref\Entities.dll
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\bin\Debug\net6.0\Entities.deps.json
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\bin\Debug\net6.0\Entities.dll
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\bin\Debug\net6.0\Entities.pdb
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.csproj.AssemblyReference.cache
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.AssemblyInfoInputs.cache
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.AssemblyInfo.cs
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.csproj.CoreCompileInputs.cache
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.dll
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\refint\Entities.dll
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\Entities.pdb
-F:\Programacion\ISPC\fsnet10-team10\BackEnd\MiBilleteraWebApi\Entities\obj\Debug\net6.0\ref\Entities.dll

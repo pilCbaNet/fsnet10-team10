@@ -15,38 +15,30 @@ export class HomeComponent {
   get usuario() {
     return this.userService.usuario;
   }
-  
+
   listTransaction: Transaction[] | undefined;
-  errorResponseTransaction: HttpErrorResponse | undefined;
   constructor(
     private router: Router,
     private transactionService: TransactionService,
     private userService: UsersService
   ) {}
-    ngOnInit(): void{
-      this.transactionService.obtainListTransactions().subscribe(
-        {
-          next: (response: Transaction[])=>{
-            response.forEach((tran, i)=>{
-              if (i === 0) {
-                this.listTransaction = [tran]
-              }
-              if (i < 5 && i !== 0) {
-                this.listTransaction?.push(tran)
-              }
-            })
-
-          },
-          error: (error) => {
-
-            // Simulacion de espera del pedido antes del error
-            setTimeout(()=>{
-              this.errorResponseTransaction = error
-            }, 10000)
-          },
-          complete: ()=> console.info('Peticion terminada')
-        }
-        )
-    }
   
+  ngOnInit(): void {
+    this.consultarSaldo()
+    this.consultarMovimientos()
+  }
+
+  consultarSaldo(){
+    let id = this.usuario.idUsuario;
+    this.transactionService.consultarSaldo(id).subscribe(resp => {
+    })
+  }
+
+  consultarMovimientos(){
+    let idCuenta = '1';
+
+    this.transactionService.ultimosMovimientos(idCuenta).subscribe(resp => {
+      
+    })
+  }
 }

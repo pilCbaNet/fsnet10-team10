@@ -4,10 +4,10 @@
   <div class="card mt-2 shadow" style="width: 18rem">
     <div class="card-body">
       <p class="card-title text-center fs-3 colorVerde fw-bold">
-        Dinero en cuenta de {{usuario.nombreUsuario}}
+        Dinero en cuenta de <span class="text-uppercase">{{usuario.nombreUsuario}}</span>
       </p>
 
-      <p class="card-text text-center fw-bold fs-5">{{ "10253" | currency }}</p>
+      <p class="card-text text-center fw-bold fs-5">{{ saldo.saldo | currency }}</p>
 
       <div>
         <button routerLink="/main/enviar" class="btn boton me-2">
@@ -19,48 +19,26 @@
       </div>
     </div>
   </div>
-  <h2 class="text-center colorVerde mt-5">Movimientos históricos</h2>
-  <!-- <table class="table mt-2 bg-white shadow">
-    <thead>
-      <tr class="table-dark">
-        <th scope="col"></th>
-        <th scope="col">Transacción</th>
-        <th scope="col">Fecha</th>
-        <th scope="col">Monto</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <tr class="table-danger">
-        <th scope="row">1</th>
-        <td>Envío de dinero a 24149910359519</td>
-        <td>10/10/1990</td>
-        <td>{{ "3245" | currency }}</td>
-      </tr>
-      <tr class="table-success">
-        <th scope="row">2</th>
-        <td>Ingreso de dinero de 983915908159015</td>
-        <td>10/10/1990</td>
-        <td>{{ "983" | currency }}</td>
-      </tr>
-      <tr class="table-danger">
-        <th scope="row">2</th>
-        <td>Envío de dinero a 24149910359519</td>
-        <td>10/10/1990</td>
-        <td>{{ "1293" | currency }}</td>
-      </tr>
-    </tbody>
-  </table> -->
-  <ng-container *ngIf="listTransaction;else Loading" >
-    <app-transactions [ngStyle]="{width: '100%'}" [Transactions]="listTransaction" ></app-transactions>
-  </ng-container>
-  <ng-template #Loading>
-    <ng-container *ngIf="!errorResponseTransaction else Error" >
-      <app-spinner></app-spinner>
-    </ng-container>
-    <ng-template #Error>
-      <p class="text-error-info">Hubo un error al cargar las transferencias, por favor vuelva intentar mas tarde</p>
-    </ng-template>
-  </ng-template>
-  <button routerLink="/main/transaction" class="btn boton mt-2 mb-2">Ver todas las Transacciones</button>
+  <div class="">
+    <h3 class="mt-5">Último movimiento</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Id Operación</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Monto</th>
+          <th scope="col">Tipo operación</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">{{transacciones.idOperacion}}</th>
+          <td>{{transacciones.fecha | date}}</td>
+          <td>{{transacciones.monto | currency }}</td>
+          <td *ngIf="transacciones.deposito === true" class="table-success">Depósito</td>
+          <td *ngIf="transacciones.deposito === false" class="table-danger">Extracción</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
