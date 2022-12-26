@@ -1,0 +1,23 @@
+.ds-flex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.error-response-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.contain-icon-error{
+    padding: 20px;
+}
+.icon-error{
+    font-size: 4rem;
+    color: rgb(133, 7, 7);
+}
+
+.text-error-response{
+    font-size: 1.5rem;
+    color: rgb(133, 7, 7);
+}

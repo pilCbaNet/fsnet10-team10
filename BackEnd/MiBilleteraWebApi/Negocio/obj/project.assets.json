@@ -5455,19 +5455,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mleiva\\.nuget\\packages\\": {}
+    "C:\\Users\\Exequiel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
+      "projectUniqueName": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
       "projectName": "Negocio",
-      "projectPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
-      "packagesPath": "C:\\Users\\mleiva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\obj\\",
+      "projectPath": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\Negocio.csproj",
+      "packagesPath": "C:\\Users\\Exequiel\\.nuget\\packages\\",
+      "outputPath": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Negocio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mleiva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Exequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5481,8 +5481,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj"
+            "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj": {
+              "projectPath": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj"
             }
           }
         }
@@ -5518,7 +5518,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

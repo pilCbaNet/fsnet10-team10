@@ -1911,19 +1911,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mleiva\\.nuget\\packages\\": {}
+    "C:\\Users\\Exequiel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+      "projectUniqueName": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\mleiva\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mleiva\\Desktop\\PIL\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\obj\\",
+      "projectPath": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\Exequiel\\.nuget\\packages\\",
+      "outputPath": "F:\\Programacion\\ISPC\\fsnet10-team10\\BackEnd\\MiBilleteraWebApi\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mleiva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Exequiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1974,7 +1974,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

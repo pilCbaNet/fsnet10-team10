@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Transaction } from 'src/app/models/transaction.model';
@@ -7,6 +8,7 @@ import { UsersService } from '../../auth/services/users.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
 
@@ -47,3 +49,4 @@ export class HomeComponent {
     })
   }
 }
+
